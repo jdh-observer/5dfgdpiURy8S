@@ -1,0 +1,42 @@
+cover.png - Figure 1. Collage of public domain images from the Rijksmuseum, created by Nadezhda Povroznik, 2026.
+Source images: Rijksmuseum, Amsterdam (Public Domain)
+
+timeline.png - Figure 2. Rijksmuseum's Journey to Openness
+
+Figure 3. Rijksmuseum: Artworks Online and Rijksstudio's Entries
+
+Figure_4.jpg - Figure 4. Number of Archived URLs per Year (www.rijksmuseum.nl)
+
+Figure_5.jpg - Figure 5. Archived Rijksmuseum URLs per Year (2011-2018)
+
+Domain_Stats_2009-2025_Screenshot_2025-02-25_13-47-01.png - Figure 6. Screenshot with Statistics on Creating the KB Web Collection (Image Courtesy: The KB)
+
+KB_URLs_Cleaned_Per_Year.png - Figure 7. Number of Archived URLs per Year (www.rijksmuseum.nl)
+
+Figure 8. Total URLs per Year
+
+openGLAM_URLs.jpg - Figure 9. Total URLs per Year (2001-2018) and Milestones of Openness
+
+Figure 10. Proportion of HTML and IMAGE per Year (Internet Archive)
+
+Figure 11. Proportion of HTML and IMAGE per Year (KB Web Collection)
+
+Figure 12. An Example of Segmentation
+
+Figure 13. Language Prefix Proportions by Year, 100% stacked (Internet Archive)
+
+Figure 14. Language Prefix Proportions by Year, 100% stacked (KB Web Collection)
+
+Figure 15. Wordcloud of Top 15 Segments Collected per Year 2000–2025 (Internet Archive)
+
+Figure 16. Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)
+
+Figure 17. Overlap of Object Numbers in the Image subset between the Internet Archive (IA) and the KB Web Collection (KB)
+
+Figure 18. Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB)
+
+Figure 19. Overlap of Object Numbers between Rijksmuseum API (API) vs the Internet Archive (IA) vs the KB Web Collection (KB)
+
+SK-A-3507.jpg - Figure 20. Screenshot of search results for object number SK-A-3507 on the Rijksmuseum website
+
+

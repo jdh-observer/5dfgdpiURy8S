@@ -1,0 +1,16 @@
+metric,value
+API_count,667894
+IA_count,312582
+KB_count,6277
+API∩IA,292292
+API∩KB,6099
+IA∩KB,5689
+region_100_API_only,375052
+region_010_IA_only,20150
+region_001_KB_only,38
+region_110_API_IA,286743
+region_101_API_KB,550
+region_011_IA_KB,140
+region_111_all_three,5549
+IA_unique_total,20150
+KB_unique_total,38
