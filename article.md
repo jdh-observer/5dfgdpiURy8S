@@ -205,7 +205,7 @@ Figure 3 visualises the number of archived URLs over time, showing how the volum
 ```python tags=["figure-4-Archived-URLs-per-Year-*"]
 from IPython.display import Image, display
 
-display(Image("./media/Figure_4.jpg"))
+display(Image("./media/Figure_4.JPG"))
 ```
 
 Zooming in on the data for 2011–2018 (Figure 4) shows an increase in the number of preserved URLs in 2016. However, the plot does not expose the expected increase in archived URLs that would correspond to the Rijksmuseum’s reported upload of more than 100,000 digital objects to its website in 2011. This means that such a substantial expansion of the museum’s online content had not been captured by the Internet Archive. The diagram's bars for the next several years do not expose a significant increase comparable with the number on the live web either.
@@ -213,7 +213,7 @@ Zooming in on the data for 2011–2018 (Figure 4) shows an increase in the numbe
 ```python tags=["figure-5-Archived-URLs-per-Year-*"]
 from IPython.display import Image, display
 
-display(Image("./media/Figure_5.jpg"))
+display(Image("./media/Figure_5.JPG"))
 ```
 
 ### National Library of the Netherlands (KB)
@@ -300,7 +300,7 @@ There are some periods in the Rijksmuseum's web history that are covered only by
 ```python tags=["figure-9-openGLAM-URLs-*"]
 from IPython.display import Image, display
 
-display(Image("./media/openGLAM_URLs.jpg"))
+display(Image("./media/openGLAM_URLs.JPG"))
 ```
 
 <!-- #region citation-manager={"citations": {"3v86p": [{"id": "16470964/BXWCMWQ3", "source": "zotero"}]}} -->
@@ -1212,7 +1212,7 @@ The randomly selected object numbers that were indicated as missing in both the 
 ```python tags=["figure-20-*"]
 from IPython.display import Image, display
 
-display(Image("./media/SK-A-3507.jpg"))
+display(Image("./media/SK-A-3507.JPG"))
 ```
 
 <!-- #region citation-manager={"citations": {"cx4a4": [{"id": "16470964/ECDVEF9E", "source": "zotero"}]}} -->
