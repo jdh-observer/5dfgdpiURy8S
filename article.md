@@ -1285,9 +1285,10 @@ The use and reuse of digital and web heritage would benefit from more thorough d
 I am grateful for the support of the KB National Library of the Netherlands, especially Iris Geldermans, Willem Jan Faber and their colleagues, whose involvement and facilitation allowed me to work at the KB DataLab with the KB Web Collection and made this research possible.
 <!-- #endregion -->
 
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["hidden"] -->
 ## Bibliography
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["hidden"] -->
 <!-- BIBLIOGRAPHY START -->
 <div class="csl-bib-body">
   <div class="csl-entry"><i id="zotero|16470964/U37NVKU3"></i>Balbi, G. (2025). “History web,” “web history,” and “history of the web”: Three subfields and why (and why not) integrating them. In <i>The Routledge Companion to Transnational Web Archive Studies</i>. Routledge.</div>
@@ -1331,7 +1332,3 @@ I am grateful for the support of the KB National Library of the Netherlands, esp
   <div class="csl-entry"><i id="zotero|16470964/2DNZ64BU"></i>Winters, J., &#38; Prescott, A. (2019). Negotiating the born-digital: a problem of search. <i>Archives and Manuscripts</i>, <i>47</i>(3), 391–403. <a href="https://doi.org/10.1080/01576895.2019.1640753">https://doi.org/10.1080/01576895.2019.1640753</a></div>
 </div>
 <!-- BIBLIOGRAPHY END -->
-
-```python
-
-```
