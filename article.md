@@ -930,7 +930,7 @@ if HAS_VENN:
 
 The amount of object numbers extracted from URL strings that lead to image files is significantly lower than of HTML files. For the Internet Archive, the total number of unique object numbers is 1086, and for the KB Web collection, it is 69. Figure 16 shows overlapping images, where a part of the images from the KB Web Collection does not exist in the collection of the Internet Archive (48 items).
 
-```python tags=["figure-17-*"]
+```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers in the Image subset between the Internet Archive (IA)"]}} tags=["figure-17-*"]
 import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn2
