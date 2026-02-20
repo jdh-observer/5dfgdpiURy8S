@@ -108,7 +108,7 @@ By applying these steps to data from the Internet Archive and the KB Web Collect
 To be able to assess volumes of obtained archived materials and to compare them with the volume of the Rijksmuseum's website on the live web across time, the indicator of the number of items in the museum's database was explored. These statistics on the database's volume were displayed on a dedicated webpage and obtained from the Wayback Machine. The Rijksstudio exposed the number of items in the database for both the general pool of artworks and those published in the Rijksstudio. For example, on the snapshot created on 23 October 2018, these numbers are available: 647.965 artworks and 437.977 Rijksstudio's (<cite id="wicnk"><a href="#zotero%7C16470964%2FCSTSCA42">(<i>Rijksstudio. Snapshot on 23.10.2018. Internet Archive, Wayback Machine</i>, n.d.)</a></cite>). Based on the available data from the last successfully preserved snapshot, the diagram was built to be able to trace the progress of uploading objects to the digital collection online (Figure 2). 
 <!-- #endregion -->
 
-```python tags=["figure-3-*"]
+```python tags=["figure-3-*"] jdh={"module": "object", "object": {"source": ["Rijksmuseum: Artworks Online and Rijksstudio's Entries"]}}
 import pandas as pd
 import matplotlib.pyplot as plt
 from IPython.display import display, HTML
