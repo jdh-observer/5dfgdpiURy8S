@@ -755,7 +755,7 @@ The visualisation of the segments in the word cloud (Figure 14) reflects only th
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from wordcloud import wordCloud
+from wordcloud import WordCloud
 import ipywidgets as widgets
 from IPython.display import display, clear_output
 
