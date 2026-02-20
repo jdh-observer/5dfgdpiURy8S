@@ -591,7 +591,7 @@ plt.xticks(x, year_cols, rotation=75)
 plt.xlabel("Year")
 plt.ylabel("Proportion (%)")
 plt.yticks(np.linspace(0, 1, 6), [f"{int(v*100)}%" for v in np.linspace(0, 1, 6)])
-plt.title("Figure 13. Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
+plt.title("Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
 
 # === 9. Place legend INSIDE the empty space (2005–2011 area) ===
 # Adjust x,y here if needed → (0.45, 0.55) means:
