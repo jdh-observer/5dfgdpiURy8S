@@ -8,7 +8,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.19.1
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: base
     language: python
     name: python3
 ---
@@ -53,7 +53,7 @@ The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institut
 The digital transformation of the Dutch museums can be traced back to 1969, when the government significantly subsidised the museum sector, favouring the first wave of digitisation (<cite id="zsxmq"><a href="#zotero%7C16470964%2FBKAVL42T">(Navarrete, 2014)</a></cite>). This step and the underlying initiatives contributed to the preparation of the digital infrastructure, which subsequently expanded. Some milestones of openness, specific to the digital domain, are located on the timeline, mapping the release of a substantial portions of its resources into the public domain under a Creative Commons Zero (CC0) license since 2011; the publication of its digital collections as Linked Open Data (<cite id="mkbhu"><a href="#zotero%7C16470964%2F6XPENT4I">(DijkshoornChris et al., 2018)</a></cite>); the promotion of use and reuse of its digital collections in high resolution through initiatives such as the Rijksawards and the Rijksstudio (<cite id="3degx"><a href="#zotero%7C16470964%2FGF4H29Z5">(Volkers, 2017)</a></cite>); and the development of tools for data search and exploration (<cite id="rqzqq"><a href="#zotero%7C16470964%2FAMCN83R4">(Mensink &#38; van Gemert, 2014)</a></cite>), alongside other projects. In Figure 1, you may see these milestones indicated on the timeline. Today, the Rijksmuseum made 823,077 artworks, 348,151 library items, and 196,648 visitor stories publicly available online (<cite id="pozva"><a href="#zotero%7C16470964%2F4MG9A6DG">(<i>Search the Collection</i>, n.d.)</a></cite>).
 <!-- #endregion -->
 
-```python jdh={"module": "object", "object": {"source": ["Rijksmuseum's Journey to Openness"]}}tags=["figure-2-Rijksmuseum-Journey-Openness-*"] 
+```python tags=["figure-2-Rijksmuseum-Journey-Openness-*"] jdh={"module": "object", "object": {"source": ["Rijksmuseum's Journey to Openness"]}}
 from IPython.display import Image, display
 
 display(Image("./media/timeline.png"))
@@ -202,7 +202,7 @@ After cleaning, the dataset contains 853,945 archived URLs. These URLs represent
 
 Figure 3 visualises the number of archived URLs over time, showing how the volume of web resources preserved in the collection changed over time. The data reveal larger fluctuations in the intensity of archiving in recent years, while earlier years are represented by a smaller number of URLs. 
 
-```python jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}} tags=["figure-4-Archived-URLs-per-Year-*"] 
+```python tags=["figure-4-Archived-URLs-per-Year-*"] jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}}
 from IPython.display import Image, display
 
 display(Image("./media/Figure_4.JPG"))
@@ -210,7 +210,7 @@ display(Image("./media/Figure_4.JPG"))
 
 Zooming in on the data for 2011–2018 (Figure 4) shows an increase in the number of preserved URLs in 2016. However, the plot does not expose the expected increase in archived URLs that would correspond to the Rijksmuseum’s reported upload of more than 100,000 digital objects to its website in 2011. This means that such a substantial expansion of the museum’s online content had not been captured by the Internet Archive. The diagram's bars for the next several years do not expose a significant increase comparable with the number on the live web either.
 
-```python jdh={"module": "object", "object": {"source": ["Archived Rijksmuseum URLs per Year (2011-2018)"]}} tags=["figure-5-Archived-URLs-per-Year-*"] 
+```python tags=["figure-5-Archived-URLs-per-Year-*"] jdh={"module": "object", "object": {"source": ["Archived Rijksmuseum URLs per Year (2011-2018)"]}}
 from IPython.display import Image, display
 
 display(Image("./media/Figure_5.JPG"))
@@ -221,7 +221,7 @@ display(Image("./media/Figure_5.JPG"))
 
 The official statistics for the KB Web Collection preserving the rijksmuseum.nl domain are shown in Figure 5.
 
-```python jdh={"module": "object", "object": {"source": ["Screenshot with Statistics on Creating the KB Web Collection (Image Courtesy: The KB)"]}} tags=["figure-6-Domain-Stats-*"] 
+```python tags=["figure-6-Domain-Stats-*"] jdh={"module": "object", "object": {"source": ["Screenshot with Statistics on Creating the KB Web Collection (Image Courtesy: The KB)"]}}
 from IPython.display import Image, display
 
 display(Image("./media/Domain_Stats_2009-2025_Screenshot_2025-02-25_13-47-01.png"))
@@ -232,7 +232,7 @@ The screenshot visualises statistics on how the KB has preserved the domain rijk
 
 After obtaining and cleaning data, the records of the URLs in the KB Web Collection represent 41.892 items. Their distribution can be seen yearly in Figure 6.
 
-```python jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}} tags=["figure-7-KB-URLs-Cleaned-Per-Year-*"] 
+```python tags=["figure-7-KB-URLs-Cleaned-Per-Year-*"] jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}}
 from IPython.display import Image, display
 
 display(Image("./media/KB_URLs_Cleaned_Per_Year.png"))
@@ -246,7 +246,7 @@ Comparing raw data, indicated on the screenshot with statistics from the KB Web 
 
 Displaying datasets together on the timeline (Figure 7) highlights the uneven distribution of data and differences in web preservation efforts.
 
-```python jdh={"module": "object", "object": {"source": ["Total URLs per Year"]}} tags=["figure-8-Total-URLs-Year-*"] 
+```python tags=["figure-8-Total-URLs-Year-*"] jdh={"module": "object", "object": {"source": ["Total URLs per Year"]}}
 # You may change the temporal gap at which data is displayed. For that:
 # Change START_YEAR and END_YEAR to display a specific period,
 # then run the cell to see the corresponding part of the diagram.
@@ -297,7 +297,7 @@ else:
 
 There are some periods in the Rijksmuseum's web history that are covered only by the Internet Archive (before 2010 and between 2015 and 2019). At the same time, during 2010-2012, the KB contributed more significantly to web preservation than the Internet Archive, and collected more data in 2013-2014. These observations show that using a single source of information cannot cover all periods of the Rijksmuseum’s web presence and that these datasets have the potential to be compiled into a more comprehensive dataset. 
 
-```python jdh={"module": "object", "object": {"source": ["Total URLs per Year (2001-2018) and Milestones of Openness"]}} tags=["figure-9-openGLAM-URLs-*"] 
+```python tags=["figure-9-openGLAM-URLs-*"] jdh={"module": "object", "object": {"source": ["Total URLs per Year (2001-2018) and Milestones of Openness"]}}
 from IPython.display import Image, display
 
 display(Image("./media/openGLAM_URLs.JPG"))
@@ -332,7 +332,7 @@ The most relevant for considering the cultural content are the files containing 
 
 The two diagrams below (Figures 9 and 10) display the proportions of HTML and image formats captured each year, separately for the Internet Archive (IA) and the KB Web Collection (KB). Each bar represents 100% of only HTML and image formats for a given year, not all the formats in the dataset.
 
-```python jdh={"module": "object", "object": {"source": ["Proportion of HTML and IMAGE per Year (Internet Archive)"]}} tags=["figure-10-*"] 
+```python tags=["figure-10-*"] jdh={"module": "object", "object": {"source": ["Proportion of HTML and IMAGE per Year (Internet Archive)"]}}
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -396,7 +396,7 @@ plt.show()
 
 ```
 
-```python jdh={"module": "object", "object": {"source": ["Proportion of HTML and IMAGE per Year (KB Web Collection)"]}} tags=["figure-11-*"] 
+```python tags=["figure-11-*"] jdh={"module": "object", "object": {"source": ["Proportion of HTML and IMAGE per Year (KB Web Collection)"]}}
 # --- KB plot ---
 x = np.arange(len(years_full))
 width = 0.8
@@ -436,7 +436,7 @@ The URL segmentation was implemented to identify the website’s substructures b
 During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="kom26"><a href="#zotero%7C16470964%2FABIIGX4D">(<i>Wayback Machine - Calendar of Https://Www.Rijksmuseum.Nl/Nl/Ontdek-de-Collectie/Overzicht/Johannes-Vermeer</i>, n.d.)</a></cite>). 
 <!-- #endregion -->
 
-```python jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} tags=["figure-12-*"] 
+```python tags=["figure-12-*"] jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}}
 from IPython.display import HTML
 
 url = "https://www.rijksmuseum.nl/nl/ontdek-de-collectie/overzicht/johannes-vermeer"
@@ -517,7 +517,7 @@ In the URLs, several main types of segments were identified:
 
 A prefix demonstrates the language versioning (such as ‘nl’ for Dutch, ‘en’ for English, ‘uk’ first used for British English but then assigned to Ukrainian, ‘de’ for German, ‘fr’ for French). On the diagram below, there is a distribution of prefixes in web collections. From the archived URLs, we see that the approach of the museum to publishing content in different languages varied. The pages in Dutch and English are dominant for both collections, but the proportions of the prefixes are different for the Internet Archive and the KB Web Collection.
 
-```python jdh={"module": "object", "object": {"source": ["Language Prefix Proportions by Year, 100% stacked (Internet Archive)"]}} tags=["figure-13-*"] 
+```python tags=["figure-13-*"] jdh={"module": "object", "object": {"source": ["Language Prefix Proportions by Year, 100% stacked (Internet Archive)"]}}
 # By prefix, Internet Archive
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -619,7 +619,7 @@ plt.show()
 
 ```
 
-```python jdh={"module": "object", "object": {"source": ["Language Prefix Proportions by Year, 100% stacked (KB Web Collection)"]}} tags=["figure-14-*"] 
+```python tags=["figure-14-*"] jdh={"module": "object", "object": {"source": ["Language Prefix Proportions by Year, 100% stacked (KB Web Collection)"]}}
 # By prefix, KB Web Collection
 
 import pandas as pd
@@ -740,7 +740,7 @@ Segmentation of URLs helped to identify the core parts of the website, such as �
 
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
-```python jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000–2025 (Internet Archive)"]}} tags=["figure-15-*"] 
+```python tags=["figure-15-*"] jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000–2025 (Internet Archive)"]}}
 # === INSTRUCTION ===
 # To visualise a specific time period (e.g. to explore temporary gaps),
 # change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
@@ -755,7 +755,7 @@ The visualisation of the segments in the word cloud (Figure 14) reflects only th
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
+from wordcloud import wordCloud
 import ipywidgets as widgets
 from IPython.display import display, clear_output
 
@@ -859,7 +859,7 @@ Now consider the segments related to the collection more precisely. Initially, r
 
 Some URL strings included the identification number of an object from the collection. The cataloguing practice at the museum represents each object number as a series of capital letters and numbers separated by ‘-‘ or ‘.’ symbols. For example, the self-portrait of Rembrandt van Rijn from the museum collection has an object number SK-A-4691. Algorithmically, these types of codes were identified in the URL strings. To focus the search on the collections, these codes were detected only in strings that include the segments ‘collection’ and ‘collectie’ in the HTML file formats. HTML is important for exploration as a framing page with the core textual and structural information about collections and objects. These codes were identified in both web collections. In the Internet Archive, there are 312.406 object numbers and in 6.282 the KB Web Collection (see Figure 15). The spherical diagram provides an overview of the unique and overlapping object numbers. The KB Web Collection, even being significantly smaller in size, still has unique data, 585 object numbers, not represented in the collection of the Internet Archive.
 
-```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)"]}} tags=["figure-16-*"] 
+```python tags=["figure-16-*"] jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)"]}}
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -930,7 +930,7 @@ if HAS_VENN:
 
 The amount of object numbers extracted from URL strings that lead to image files is significantly lower than of HTML files. For the Internet Archive, the total number of unique object numbers is 1086, and for the KB Web collection, it is 69. Figure 16 shows overlapping images, where a part of the images from the KB Web Collection does not exist in the collection of the Internet Archive (48 items).
 
-```python tags=["figure-17-*"] jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers in the Image subset between the Internet Archive (IA) and the KB Web Collection (KB)"]}}
+```python tags=["figure-17-*"]
 import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn2
@@ -993,7 +993,7 @@ plt.show()
 
 Data filtering in the dataset is very high at this stage, because only images that include the ‘collection’ or ‘collectie’ segment are included. They are deduplicated by having one object number across all datasets, regardless of their size and quality. Deduplication included the rule of keeping the most recent record and deleting from the subset of data older versions of the image. Also, these files mainly belong to the earlier period of history of the website, as it is visible from the distribution chart in Figure 17.
 
-```python jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-18-*"] 
+```python tags=["figure-18-*"] jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}}
 # Distribution object numbers by years
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1074,7 +1074,7 @@ To assess the results of object number extraction, the experiment compared the o
 
 Object numbers, previously separated according to formats (HTML and images) extracted from the URLs datasets of the collection from the Internet Archive and from the KB web collection, were aggregated in a single file per preserving institution, deduplicated and compared with the object numbers from the Rijksmuseum Data Dumps. Results of these experiments are exposed in the table and spherical diagram below (Figure 18). The datasets largely overlap in object numbers, as expected. The majority of the object numbers from the Internet Archive and the KB Web Collection overlap with Rijksmuseum Data Dumps. At the same time, the unexpected result is a large number of unique entries (20.150) in the Internet Archive that are not specific to the data from the Rijksmuseum Data Dumps.
 
-```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between Rijksmuseum API (API) vs the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-19-*"] 
+```python tags=["figure-19-*"] jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between Rijksmuseum API (API) vs the Internet Archive (IA) vs the KB Web Collection (KB)"]}}
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1209,7 +1209,7 @@ Distribution of the object numbers obtained from the URL strings over time, disp
 
 The randomly selected object numbers that were indicated as missing in both the Rijksmuseum Data Dumps and the museum’s collection online were also searched on Wikidata. Some of them returned in the search system, being labelled as a part of the Rijksmuseum collection. For example, the object number “SK-A-3507”, which is unique to the collection from the Internet Archive, was missing again in both the Rijksmuseum Data Dumps and the Rijksmuseum collection online (see Figure 19). 
 
-```python jdh={"module": "object", "object": {"source": ["Screenshot of search results for object number SK-A-3507 on the Rijksmuseum website"]}} tags=["figure-20-*"] 
+```python tags=["figure-20-*"] jdh={"module": "object", "object": {"source": ["Screenshot of search results for object number SK-A-3507 on the Rijksmuseum website"]}}
 from IPython.display import Image, display
 
 display(Image("./media/SK-A-3507.JPG"))
@@ -1331,3 +1331,7 @@ I am grateful for the support of the KB National Library of the Netherlands, esp
   <div class="csl-entry"><i id="zotero|16470964/2DNZ64BU"></i>Winters, J., &#38; Prescott, A. (2019). Negotiating the born-digital: a problem of search. <i>Archives and Manuscripts</i>, <i>47</i>(3), 391–403. <a href="https://doi.org/10.1080/01576895.2019.1640753">https://doi.org/10.1080/01576895.2019.1640753</a></div>
 </div>
 <!-- BIBLIOGRAPHY END -->
+
+```python
+
+```
