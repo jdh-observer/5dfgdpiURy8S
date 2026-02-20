@@ -740,7 +740,7 @@ Segmentation of URLs helped to identify the core parts of the website, such as â
 
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
-```python tags=["figure-15-*"] jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000â€“2025 (Internet Archive)"]}}
+```python tags=["figure-15-*"] jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}}
 # === INSTRUCTION ===
 # To visualise a specific time period (e.g. to explore temporary gaps),
 # change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
