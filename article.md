@@ -6,15 +6,15 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.19.1
+      jupytext_version: 1.19.4
   kernelspec:
-    display_name: base
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["title"] -->
-# How Open Is the Rijksmuseum? A Historical Perspective on Its Web-Archived Presence
+# How Open Is the Rijksmuseum? Web Archives, Documentation, and the Historical Record of Online Collections
 <!-- #endregion -->
 
 <!-- #region tags=["contributor"] -->
@@ -39,14 +39,13 @@ web history, web archives, Internet Archive, KB Web Collection, Rijksmuseum, ope
 <!-- #endregion -->
 
 <!-- #region tags=["abstract"] -->
-Abstract: 
-The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institution in making cultural heritage openly accessible. This paper is motivated by the question of how the historical development of openness at the Rijksmuseum can be studied through preserved web records. The main goal is to assess the availability and analytical value of web-archived resources documenting the Rijksmuseum’s web presence. The study is built upon datasets from the Internet Archive and the Web Collection of the National Library of the Netherlands (KB), covering the period from 1999 to June 2025. Methodologically, it applies URL-based analysis and comparative analysis to examine temporal coverage and overlaps between the two web collections. The findings show that web preservation of the Rijksmuseum website is highly uneven and only partially reflects the growth of the online collection. Key periods of large-scale uploads and openness initiatives are weakly represented or absent in the web collections. Although the Internet Archive and the KB Web Collection each preserve unique materials and fill different temporal gaps, neither provides a comprehensive record on its own. The paper highlights the methodological consequences of these limitations and underscores the need to combine web-archived datasets, to apply source criticism when studying the historical development of the Rijksmuseum's openness and web presence, and to reconsider the approach to web preservation, thereby increasing the museum's role in this process.
+The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institution in making cultural heritage openly accessible. This paper is motivated by the question of how the historical development of openness at the Rijksmuseum can be studied through preserved web records. The main goal is to assess the availability and analytical value of web-archived resources documenting the Rijksmuseum’s web presence. The study is built upon datasets from the Internet Archive and the Web Collection of the National Library of the Netherlands (KB), covering the period from 1999 to June 2025. Methodologically, it applies URL-based analysis and comparative analysis to examine temporal coverage and overlaps between the two web collections. The findings show that web preservation of the Rijksmuseum website is highly uneven and only partially reflects the growth of the online collection. Records that document large-scale uploads and initiatives related to developing openness are highly fragmented in the web collections. Although the Internet Archive and the KB Web Collection each preserve unique materials and fill different temporal gaps, neither provides a comprehensive record on its own. The paper highlights the methodological consequences of these limitations and underscores the need to combine web-archived datasets to study the history of the museum on the web, to apply source criticism when analysing the development of the museum on the web, to the need for thorough and transparent documentation as an open practice, and to reconsider the approach to web preservation, thereby increasing the museum's role in this process.
 <!-- #endregion -->
 
 ## Introduction
 
-<!-- #region citation-manager={"citations": {"3uvy6": [{"id": "16470964/L3YX7GNF", "source": "zotero"}], "dqlr9": [{"id": "16470964/DM72ISLW", "source": "zotero"}], "p1jqs": [{"id": "16470964/VRE8WZEV", "source": "zotero"}], "xe9wj": [{"id": "16470964/A7PZLB6B", "source": "zotero"}]}} -->
-The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institution in making cultural heritage openly accessible to researchers and the wider public (<cite id="dqlr9"><a href="#zotero%7C16470964%2FDM72ISLW">(Terras, 2015)</a></cite>; Rühse, 2017 <cite id="p1jqs"><a href="#zotero%7C16470964%2FVRE8WZEV">(Rühse, 2017)</a></cite>). This initiative provided impetus and became a starting point for the Open GLAM movement, as museums across the globe began making their collections available under open licenses (<cite id="3uvy6"><a href="#zotero%7C16470964%2FL3YX7GNF">(McCarthy, 2019)</a></cite>; <cite id="xe9wj"><a href="#zotero%7C16470964%2FA7PZLB6B">(Wallace, 2020)</a></cite>). This research was largely motivated by the question about the historical development of openness of the Rijksmuseum.
+<!-- #region citation-manager={"citations": {"3uvy6": [], "dqlr9": [], "p1jqs": [], "xe9wj": []}} -->
+The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institution in making cultural heritage openly accessible to researchers and the wider public (<cite id="dqlr9"><a href="#zotero%7C16470964%2FDM72ISLW">(Terras, 2015)</a></cite>; Rühse, 2017 <cite id="p1jqs"><a href="#zotero%7C16470964%2FVRE8WZEV">(Rühse, 2017)</a></cite>). This initiative provided impetus and became a starting point for the Open GLAM movement, as museums across the globe began making their collections available under open licenses (<cite id="3uvy6"><a href="#zotero%7C16470964%2FL3YX7GNF">(McCarthy, 2019)</a></cite>; <cite id="xe9wj"><a href="#zotero%7C16470964%2FA7PZLB6B">(Wallace, 2020)</a></cite>). Openness as a concept has a wide range of angles and may include open access, open data, open licensing and re-use, open methods, documentation, reproducibility, open participation and co-creation, and others (Arthur et al., 2024; Cao, 2023). Therefore, considering these aspects and the historical trajectory of their implementation and the development of openness in the museums is important for understanding and mapping the complexity of openness.
 <!-- #endregion -->
 
 <!-- #region citation-manager={"citations": {"3degx": [{"id": "16470964/GF4H29Z5", "source": "zotero"}], "mkbhu": [{"id": "16470964/6XPENT4I", "source": "zotero"}], "pozva": [{"id": "16470964/4MG9A6DG", "source": "zotero"}], "rqzqq": [{"id": "16470964/AMCN83R4", "source": "zotero"}], "zsxmq": [{"id": "16470964/BKAVL42T", "source": "zotero"}]}} -->
