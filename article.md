@@ -8,7 +8,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.19.5
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: base
     language: python
     name: python3
 ---
@@ -76,7 +76,10 @@ To be able to address these questions, it is necessary to evaluate the available
 3) Snapshots on the web archives (Internet Archive (<cite id="g07vo"><a href="#zotero%7C16470964%2FVU53ZACQ">(<i>Internet Archive</i>, n.d.)</a></cite>)) and the Web Collection of the National Library of the Netherlands (<cite id="0qsrd"><a href="#zotero%7C16470964%2F3KRW6VFT">(De Bode &#38; Teszelszky, 2021)</a></cite>; <cite id="lt8rv"><a href="#zotero%7C16470964%2F5V83W63Z">(P. De Bode et al., 2021)</a></cite>). The web-archived collections are necessary to identify the records that have been preserved and, therefore, made available as historical materials for study.
 <!-- #endregion -->
 
-Therefore, the main goal of this paper is to assess the availability and evaluate the resources for the historical development of the Rijksmuseum on the web. The museum’s web presence is essential for consideration because the museum's website documents various activities and serves as the primary site for distributing information in different formats. 
+The digital turn influenced the management of museum collections significantly, how the collections become structured and represented, and raised new expectations about publishing collections online (Rother, Koss & Mariani 2024 rother_provenance_accountability_2026). In this regard, the history of a museum collection can be seen and studied through its documentation and the history of information management (Turner, 2016 turner_computerization_material_culture_2016). At the same time, documentation as a practice of recording museum collections is a subject of debate, especially due to the implementation of digital tools and methods in museum work and collections’ representation on the web (Economou & Kist, 2024 economou_practice_architectures_2024; Turner, 2016 turner_computerization_material_culture_2016). In particular, the metadata and types of metadata that have to be included in the publication are in the focus of the discussions (Durrant, 2026 durrant_deaccessioning_museum_objects_2026; Economou & Kist, 2024 economou_practice_architectures_2024; Jones 2018 jones_catalogues_contextual_networks_2018; Park, 2023 park_we_want_to_know_more_2023). Researchers highlight that the information about objects has tended to focus on so-called "tombstone data" — maker, title, medium, dimensions, and accession number — while richer contextual information, including provenance, ownership history, and records of institutional decisions about objects, has remained comparatively underdeveloped (Rother, Koss & Mariani, 2024 rother_provenance_accountability_2026). The current research contributes to these discussions by examining the accessibility of these records retrospectively and articulating limits to understand the development of the collections on the web using the Rijksmuseum web presence as a case study.
+
+
+Therefore, the main goal of this paper is to assess the availability and to evaluate the resources for analysis of the historical development of the Rijksmuseum on the web and in the digital museum collection.
 
 
 ## Research Goals and Methodology
@@ -102,22 +105,19 @@ The overarching goal of researching web-archived records of the Rijksmuseum’s 
 4) Checking the outputs by aligning the web-archived data with the current museum’s data.
 
 
-These questions were approached primarily through URL analysis. URLs provide information about content that constituted the Rijksmuseum’s website and reflect a range of its characteristics. The URL string may disclose some of the sections that the website carries. Therefore, it is possible to conduct content analysis of these fragments of textual information, identify key sections (for example, a collection),  and provide insights into the structure of the website and also into the distribution of information across language versions.
+These questions were approached primarily through URL analysis without downloading the materials themselves. URL analysis has been successfully implemented by researchers to analyse the historical web. Ben-David (2016 ben_david_web_deleted_past_2016) used segmenting URLs from the Internet Archive to reconstruct the architecture of the former Yugoslav web domain, Brügger (2021 brugger_digital_humanities_web_archives_2021) showed how CDX metadata supports large-scale historical analysis of the Danish web domains. URL analysis has also been applied to assess coverage of web-archived collections. Samar et al. (2014 samar_uncovering_unarchived_web_2014) used URL extraction to reveal the scale of content that existed on the live web but was never captured by crawlers, and Maemura et al. (2018 maemura_if_these_crawls_2018) explained how URL-level crawl metadata can systematically document the provenance and limitations of web archive collections. So, scholarship demonstrates the effectiveness of URL analysis and shows it as a scalable, metadata-driven method well suited to the current comparative and longitudinal study of web-archived museum presence.
+
+
+URLs provide information about content that constituted the Rijksmuseum’s website and reflect a range of its characteristics. The URL string may disclose the content of some of the sections that the website carries. Therefore, it is possible to conduct content analysis of these fragments of textual information, identify key sections (for example, a collection or object number), and provide insights into the structure of the website and also into the distribution of information across language versions.
 
 
 ## Datasets: Building and Overview
 
-<!-- #region citation-manager={"citations": {"8bwrd": [{"id": "16470964/5LJVV378", "source": "zotero"}]}} -->
-To access data from the Internet Archive, the Wayback Machine API was used (<cite id="8bwrd"><a href="#zotero%7C16470964%2F5LJVV378">(<i>Wayback Machine APIs | Internet Archive</i>, n.d.)</a></cite>). The KB Web Collection was explored based on the Solrwayback instance available at the KB Datalab. The datasets were produced by applying similar practices for data filtering, cleaning, and processing. The resulting export file contains metadata for each capture, including the original URL, timestamp, status code, MIME type, content digest, and some other fields. Datasets were shaped by including only URLs filtered by status 200. The necessary condition was to receive successfully processed data during crawling, which is indicated in the metadata with status 200. The other materials were not taken into account as having technical issues or failures during preservation. The function ‘digest’ has been applied to filter data and work with unique materials, minimising noise. 'Digest' in metadata reflects the hash value, generated automatically based on the captured content (the bytes), and it is used to identify identical or near-identical versions of the web content.
-<!-- #endregion -->
 
-A series of cleaning steps was implemented to make the data analytically usable. For that reason, the duplicates were removed on the basis of the ‘digest’ value. Deduplication was performed separately for each year. Also, the URL strings were filtered by excluding URLs that contained query symbols (such as ‘?’ and ‘&’), fragments (#), and some other symbols specific to temporary and script-generated parameters. In the next step, the unique URLs were filtered, and as a result, only one unique URL could appear in the data per year, but it could repeat across different years.
-
-
-By applying these steps to data from the Internet Archive and the KB Web Collection, two datasets were obtained. They were used for the subsequent filtering and analysis.
+To access data from the Internet Archive, the Wayback Machine API was used (Wayback Machine APIs, 2026 noauthor_wayback_nodate). The resulting export file contains metadata for each capture, including the original URL, timestamp, status code, MIME type, content digest, and some other fields. The KB Web Collection was explored based on the Solrwayback instance available at the KB Datalab. The datasets were produced by applying similar practices for data filtering, cleaning, and processing. The raw data, obtained from the Internet Archive, and other derivatives, such as processed data, visualisations and Jupyter notebooks, have been published on Zenodo (Povroznik, 2026). The project has also been published on GitHub (Rijksmuseum_web-history-collection, 2026) to maintain transparency of the research process and its reproducibility. The repository contains all the information about data processing and settings used to obtain and analyse data. The dataset from the KB web collection is available in the KB DataLab due to copyright restrictions.
 
 <!-- #region citation-manager={"citations": {"wicnk": [{"id": "16470964/CSTSCA42", "source": "zotero"}]}} -->
-To be able to assess volumes of obtained archived materials and to compare them with the volume of the Rijksmuseum's website on the live web across time, the indicator of the number of items in the museum's database was explored. These statistics on the database's volume were displayed on a dedicated webpage and obtained from the Wayback Machine. The Rijksstudio exposed the number of items in the database for both the general pool of artworks and those published in the Rijksstudio. For example, on the snapshot created on 23 October 2018, these numbers are available: 647.965 artworks and 437.977 Rijksstudio's (<cite id="wicnk"><a href="#zotero%7C16470964%2FCSTSCA42">(<i>Rijksstudio. Snapshot on 23.10.2018. Internet Archive, Wayback Machine</i>, n.d.)</a></cite>). Based on the available data from the last successfully preserved snapshot, the diagram was built to be able to trace the progress of uploading objects to the digital collection online (Figure 2). 
+For assessing volumes of obtained archived materials, devoted to the museum collection online, and to compare them with the volume of the Rijksmuseum's website on the live web across time, the indicator of the number of items in the museum's collection database was explored. These statistics on the database's volume were displayed on a dedicated webpage and obtained from the Wayback Machine. The Rijksstudio exposed the number of items in the database for both the general pool of artworks and those published in the Rijksstudio. For example, on the snapshot created on 23 October 2018, these numbers are available: 647.965 artworks and 437.977 Rijksstudio's (Rijksstudio, 2018 noauthor_rijksstudio_nodate). Based on the available data from the last successfully preserved snapshot, the diagram was built to be able to trace the progress of uploading objects to the digital collection online (Figure 3).
 <!-- #endregion -->
 
 ```python jdh={"module": "object", "object": {"source": ["Rijksmuseum: Artworks Online and Rijksstudio's Entries"]}} tags=["figure-3-*"]
@@ -141,7 +141,7 @@ plt.plot(years, df["total_artworks"],
 plt.plot(years, df["rijksstudios"],
          marker="o", label="Rijksstudio's")
 
-plt.title("Rijksmuseum: Artworks Online and Rijksstudio's Entries")
+plt.title("igure 3. Rijksmuseum: Artworks Online and Rijksstudio's Entries")
 plt.xlabel("Year")
 plt.ylabel("Count")
 plt.grid(True, linestyle="--", linewidth=0.5)
@@ -202,7 +202,7 @@ html = f"""
 display(HTML(html))
 ```
 
-The line chart in Figure 2 shows the Rijksmuseum’s total number of artworks, published online in the general pool (blue line) and those available on the Rijksstudio (orange line). The temporal gap for these statistics is from 2013 to 2024. The website indicated the total number of items available in the database since 2013, according to records on the Wayback Machine. After 2024, the website's structure changed, and such statistics for the later period are unavailable. Both curves display consistent and smooth growth trajectories, which come closer to each other approaching 2025, which means that by that time, almost all the digitised artworks for their reuse through the Rijkstudio platform have been uploaded. Rijksstudio entries steadily grew from about 110,000 to nearly 780,000 in 2024. Having these numbers at stake, it is possible to assess roughly the portion of the museum’s web preserved by the Internet Archive and the KB Web Collection.
+The line chart in Figure 3 shows the Rijksmuseum’s total number of artworks, published online in the general pool (blue line) and those available on the Rijksstudio (orange line). The temporal gap for these statistics is from 2013 to 2024. The website indicated the total number of items available in the database since 2013, according to records on the Wayback Machine. After 2024, the website's structure changed, and such statistics for the later period are unavailable. Both curves display consistent and smooth growth trajectories, which come closer to each other approaching 2025, which means that by that time, almost all the digitised artworks for their reuse through the Rijkstudio platform have been uploaded. Rijksstudio entries steadily grew from about 110,000 to nearly 780,000 in 2024. Having these numbers at stake, it is possible to assess roughly the portion of the museum’s web preserved by the Internet Archive and the KB Web Collection.
 
 
 ### Internet Archive
@@ -211,15 +211,7 @@ The line chart in Figure 2 shows the Rijksmuseum’s total number of artworks, p
 After cleaning, the dataset contains 853,945 archived URLs. These URLs represent the preserved web resources associated with the Rijksmuseum and span 27 years of web archiving activity captured by the Internet Archive.
 
 
-Figure 3 visualises the number of archived URLs over time, showing how the volume of web resources preserved in the collection changed over time. The data reveal larger fluctuations in the intensity of archiving in recent years, while earlier years are represented by a smaller number of URLs. 
-
-```python jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}} tags=["figure-4-Archived-URLs-per-Year-*"]
-from IPython.display import Image, display
-
-display(Image("./media/Figure_4.JPG"))
-```
-
-Zooming in on the data for 2011–2018 (Figure 4) shows an increase in the number of preserved URLs in 2016. However, the plot does not expose the expected increase in archived URLs that would correspond to the Rijksmuseum’s reported upload of more than 100,000 digital objects to its website in 2011. This means that such a substantial expansion of the museum’s online content had not been captured by the Internet Archive. The diagram's bars for the next several years do not expose a significant increase comparable with the number on the live web either.
+Figure 4 visualises the number of archived URLs over time, showing how the volume of web resources preserved in the collection changed over time. The data reveal larger fluctuations in the intensity of archiving in recent years, while earlier years are represented by a smaller number of URLs. 
 
 ```python jdh={"module": "object", "object": {"source": ["Archived Rijksmuseum URLs per Year (2011-2018)"]}} tags=["figure-5-Archived-URLs-per-Year-*"]
 from IPython.display import Image, display
@@ -227,10 +219,19 @@ from IPython.display import Image, display
 display(Image("./media/Figure_5.JPG"))
 ```
 
+```python jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}} tags=["figure-4-Archived-URLs-per-Year-*"]
+from IPython.display import Image, display
+
+display(Image("./media/Figure_4.JPG"))
+```
+
+Zooming in on the data for 2011–2018 (Figure 5) shows an increase in the number of preserved URLs in 2016. However, the plot does not expose the expected increase in archived URLs that would correspond to the Rijksmuseum’s reported upload of more than 100,000 digital objects to its website in 2011. This means that such a substantial expansion of the museum’s online content had not been captured by the Internet Archive. The diagram's bars for the next several years do not expose a significant increase comparable with the number on the live web either.
+
+
 ### National Library of the Netherlands (KB)
 
 
-The official statistics for the KB Web Collection preserving the rijksmuseum.nl domain are shown in Figure 5.
+The official statistics for the KB Web Collection preserving the rijksmuseum.nl domain are shown in Figure 6.
 
 ```python jdh={"module": "object", "object": {"source": ["Screenshot with Statistics on Creating the KB Web Collection (Image Courtesy: The KB)"]}} tags=["figure-6-Domain-Stats-*"]
 from IPython.display import Image, display
@@ -238,10 +239,10 @@ from IPython.display import Image, display
 display(Image("./media/Domain_Stats_2009-2025_Screenshot_2025-02-25_13-47-01.png"))
 ```
 
-The screenshot visualises statistics on how the KB has preserved the domain rijksmuseum.nl between 2009 and 2025, based on the size of the collection in kilobytes (blue line), the number of pages (red line) and ingoing links (green line). There are two major preservation waves. The first peak occurs between 2010 and 2014, and the position of the blue curve leads us to guess that most of the volume was occupied by images. The dynamics of the curve after 2013 demonstrate changes in the strategy of web preservation towards prioritising webpages over images. Closeness of the blue line (pages) and the red line (size) reflects a larger amount of small-sized files captured (probably, HTML pages) rather than larger-volume size specific to image formats. This strategy will also be specific to the next wave. After 2015, preservation activity dropped to zero. A second major wave appears between 2019 and 2022, showing a larger volume of data collected. The blue line peaks in 2020, followed by a gradual decline in 2021–2022. All these fluctuations demonstrate the adjustment of the collecting institution to web preservation and trying different approaches and technical settings.
+The screenshot visualises statistics on how the KB has preserved the domain rijksmuseum.nl between 2009 and 2025, based on the size of the collection in kilobytes (blue line), the number of pages (red line) and ingoing links (green line). There are two major preservation waves. The first peak occurs between 2010 and 2014, and the position of the blue curve leads us to guess that most of the volume was occupied by images. The dynamics of the curve after 2013 demonstrate changes in the strategy of web preservation towards prioritising webpages over images. Closeness of the blue line (pages) and the red line (size) reflects a larger amount of small-sized files captured (probably, HTML pages) rather than a larger-volume size specific to image formats. This strategy will also be exact to the next wave. After 2015, preservation activity dropped to zero. A second major wave appears between 2019 and 2022, showing a larger volume of data collected. The blue line peaks in 2020, followed by a gradual decline in 2021–2022. All these fluctuations demonstrate the adjustment of the collecting institution to web preservation and trying different approaches and technical settings.
 
 
-After obtaining and cleaning data, the records of the URLs in the KB Web Collection represent 41.892 items. Their distribution can be seen yearly in Figure 6.
+After obtaining and cleaning the data, the records of the URLs in the KB Web Collection represent 41.892 items. Their distribution can be seen yearly in Figure 7.
 
 ```python jdh={"module": "object", "object": {"source": ["Number of Archived URLs per Year (www.rijksmuseum.nl)"]}} tags=["figure-7-KB-URLs-Cleaned-Per-Year-*"]
 from IPython.display import Image, display
@@ -255,7 +256,7 @@ Comparing raw data, indicated on the screenshot with statistics from the KB Web 
 ### Comparing Datasets
 
 
-Displaying datasets together on the timeline (Figure 7) highlights the uneven distribution of data and differences in web preservation efforts.
+Displaying datasets together on the timeline (Figure 8) highlights the uneven distribution of data and differences in web preservation efforts.
 
 ```python jdh={"module": "object", "object": {"source": ["Total URLs per Year"]}} tags=["figure-8-Total-URLs-Year-*"]
 # You may change the temporal gap at which data is displayed. For that:
@@ -296,7 +297,7 @@ else:
     plt.bar(x - width / 2, df_zoom["IA"].to_numpy(), width, label="IA")
     plt.bar(x + width / 2, df_zoom["KB"].to_numpy(), width, label="KB")
 
-    plt.title(f"Total URLs per Year ({START_YEAR}–{END_YEAR})", fontsize=14)
+    plt.title(f"Figure 8. Total URLs per Year ({START_YEAR}–{END_YEAR})", fontsize=14)
     plt.xlabel("Year")
     plt.ylabel("Number of URLs")
     plt.xticks(x, labels, rotation=45)
@@ -311,17 +312,17 @@ There are some periods in the Rijksmuseum's web history that are covered only by
 ```python jdh={"module": "object", "object": {"source": ["Total URLs per Year (2001-2018) and Milestones of Openness"]}} tags=["figure-9-openGLAM-URLs-*"]
 from IPython.display import Image, display
 
-display(Image("./media/openGLAM_URLs.JPG"))
+display(Image("./media/openGLAM_URLs.jpg"))
 ```
 
 <!-- #region citation-manager={"citations": {"3v86p": [{"id": "16470964/BXWCMWQ3", "source": "zotero"}]}} -->
-At the same time, placing some milestones of openness on this timeline enables us to see a significant gap in the historical record of the museum’s web presence (Figure 8). There is no evidence of pikes or other indicators of these uploads and the website's growth in the years around the milestones when the museum's collection was massively pulled online. For example, in 2011, the museum began releasing images to the public domain; at the end of 2012, the Rijkstudio was launched; and in 2013, 111.000 images were published in the public domain (<cite id="3v86p"><a href="#zotero%7C16470964%2FBXWCMWQ3">(“| Case Study,” 2013)</a></cite>). In the museum's database, there is also a record of more than 200,000 artworks available in high resolution, according to data from 2015 (see Figure 2). Large portions of this information are missing in the archived records.
+At the same time, placing some milestones of openness on this timeline enables us to see a significant gap in the historical record of the museum’s web presence (Figure 9). There is no evidence of spikes or other indicators of these uploads and the website's growth in the years around the milestones when the museum's collection was massively pulled online. For example, in 2011, the museum began releasing images to the public domain; at the end of 2012, the Rijkstudio was launched; and in 2013, 111.000 images were published in the public domain (OpenGLAM, 2013 noauthor_openglam_2013). In the museum's database, there is also a record of more than 200,000 artworks available in high resolution, according to data from 2015 (see Figure 3). Evidence of these activities is missing in the archived records.
 <!-- #endregion -->
 
 ## URLs Analysis
 
 
-The URL analysis was selected to gain an understanding of the structure of the preserved materials and their belonging to the website’s subsections.
+URL analysis was selected to understand the structure of the preserved materials and their belonging to the website’s subsections.
 
 
 ### Formats
@@ -341,28 +342,29 @@ The extracted file formats can be divided into several functional groups:
 The most relevant for considering the cultural content are the files containing textual information (represented primarily in HTML) and images. Comparing their proportions across datasets shows the focus of preservation efforts over time and helps assess which expressive aspects of the Rijksmuseum web presence are most visible in these web-archival collections.
 
 
-The two diagrams below (Figures 9 and 10) display the proportions of HTML and image formats captured each year, separately for the Internet Archive (IA) and the KB Web Collection (KB). Each bar represents 100% of only HTML and image formats for a given year, not all the formats in the dataset.
+The two diagrams below (Figures 10 and 11) display the proportions of HTML and image formats captured each year, separately for the Internet Archive (IA) and the KB Web Collection (KB). Each bar represents 100% of only HTML and image formats for a given year, not all the formats in the dataset.
 
 ```python jdh={"module": "object", "object": {"source": ["Proportion of HTML and IMAGE per Year (Internet Archive)"]}} tags=["figure-10-*"]
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# --- Paths ---
+# --- Paths to your aggregated 2-row tables (HTML / IMAGE) ---
 ia_path = "./media/IA_Rijksmuseum_file_formats_per_year_aggregated.csv"
 kb_path = "./media/KB_URLs_200statuscode_full_cleaned_Formats_aggregated.csv"
 
-# --- Load data ---
+# --- Load data and set index = format ---
 ia = pd.read_csv(ia_path).set_index("format")
 kb = pd.read_csv(kb_path).set_index("format")
 
-# Ensure numeric
+# Make sure all non-format columns are numeric
 ia = ia.apply(pd.to_numeric, errors="raise")
 kb = kb.apply(pd.to_numeric, errors="raise")
 
 years_full = list(range(1999, 2026))  # 1999–2025
 
 def prep_props(df):
+    """Return two lists (html_props, image_props) aligned with years_full."""
     html_props = []
     image_props = []
     for y in years_full:
@@ -375,10 +377,10 @@ def prep_props(df):
                 html_props.append(html_val / total)
                 image_props.append(image_val / total)
             else:
-                html_props.append(np.nan)
+                html_props.append(np.nan) # no bar
                 image_props.append(np.nan)
         else:
-            html_props.append(np.nan)
+            html_props.append(np.nan) # no data for this year
             image_props.append(np.nan)
     return np.array(html_props), np.array(image_props)
 
@@ -388,7 +390,7 @@ kb_html, kb_image = prep_props(kb)
 
 # --- IA plot ---
 x = np.arange(len(years_full))
-width = 0.8
+width = 0.8 # single wide bar per archive (since IA and KB are on separate plots)
 
 plt.figure(figsize=(14, 5))
 plt.bar(x, ia_html, width, label="HTML", color="#1f77b4")
@@ -429,7 +431,7 @@ plt.show()
 
 ```
 
-The proportional distribution of HTML and image formats across the two web collections (Figures 9 and 10) shows a clear long-term shift in the way the Rijksmuseum website has been captured and preserved. In the early years, particularly in the Internet Archive, image files constitute a substantial proportion of archived resources. Over time, however, both collections show a pronounced move toward an HTML-dominated crawl, also indirectly reflecting changes in the museum’s web infrastructure. In general, this trend reflects a transition in the construction of the Rijksmuseum’s website to dynamically generated architecture, where images and other media are getting delivered from the external services (first of all related to JavaScript), which are more problematic for crawlers to capture.
+The proportional distribution of HTML and image formats across the two web collections (Figures 10 and 11) shows a clear long-term shift in the way the Rijksmuseum website has been captured and preserved. In the early years, particularly in the Internet Archive, image files constituted a substantial proportion of archived resources. Over time, however, both collections show a pronounced move toward an HTML-dominated crawl, also indirectly reflecting changes in the museum’s web infrastructure. In general, this trend reflects a transition in the construction of the Rijksmuseum’s website to dynamically generated architecture, where images and other media are delivered from external services (first of all related to JavaScript), which are more problematic for crawlers to capture.
 
 
 As a result, the archival record, by today, is shaped almost entirely by the website's structural and textual components and almost entirely omits its visual elements. This means that the materials captured by both web collections are increasingly imbalanced in their representation of the museum’s online presence and expose a conflict between contemporary web technologies and crawler capabilities, which negatively affects external capture. HTML pages remain retrievable to a certain extent and dominate the preserved material, whereas high-resolution and other types of images, dynamically loaded from external platforms and services, are captured only sporadically or not at all, even though they are meaningful as part of the born-digital heritage.
@@ -444,7 +446,7 @@ As a result, the archival record, by today, is shaped almost entirely by the web
 The URL segmentation was implemented to identify the website’s substructures based on content analysis of these segments. HTML type of files were selected for segmentation because they represent a foundational structure of the website.
 
 <!-- #region citation-manager={"citations": {"kom26": [{"id": "16470964/ABIIGX4D", "source": "zotero"}]}} -->
-During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="kom26"><a href="#zotero%7C16470964%2FABIIGX4D">(<i>Wayback Machine - Calendar of Https://Www.Rijksmuseum.Nl/Nl/Ontdek-de-Collectie/Overzicht/Johannes-Vermeer</i>, n.d.)</a></cite>). 
+During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 12 (<cite id="kom26"><a href="#zotero%7C16470964%2FABIIGX4D">(<i>Wayback Machine - Calendar of Https://Www.Rijksmuseum.Nl/Nl/Ontdek-de-Collectie/Overzicht/Johannes-Vermeer</i>, n.d.)</a></cite>). 
 <!-- #endregion -->
 
 ```python jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} tags=["figure-12-*"]
@@ -516,10 +518,10 @@ HTML(html)
 ```
 
 In the URLs, several main types of segments were identified:
-1) prefix;
-2) core parts of the website;
-3) content-specific identifiers;
-4) additional parameters and identifiers in the hierarchy.
+1) Prefix;
+2) Core parts of the website;
+3) Content-specific identifiers;
+4) Additional parameters and identifiers in the hierarchy.
 
 
 
@@ -602,7 +604,7 @@ plt.xticks(x, year_cols, rotation=75)
 plt.xlabel("Year")
 plt.ylabel("Proportion (%)")
 plt.yticks(np.linspace(0, 1, 6), [f"{int(v*100)}%" for v in np.linspace(0, 1, 6)])
-plt.title("Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
+plt.title("igure 13. Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
 
 # === 9. Place legend INSIDE the empty space (2005–2011 area) ===
 # Adjust x,y here if needed → (0.45, 0.55) means:
@@ -710,7 +712,7 @@ plt.xticks(x, all_years, rotation=75)
 plt.xlabel("Year")
 plt.ylabel("Proportion (%)")
 plt.yticks(np.linspace(0, 1, 6), [f"{int(v*100)}%" for v in np.linspace(0, 1, 6)])
-plt.title("Language Prefix Proportions by Year, 100% stacked (KB Web Collection)")
+plt.title("igure 14. Language Prefix Proportions by Year, 100% stacked (KB Web Collection)")
 
 # === 9. Legend inside the plot ===
 plt.legend(
@@ -737,7 +739,7 @@ plt.show()
 
 ```
 
-The comparison of language prefixes across the two web collections (Figures 12 and 13) shows different preservation profiles shaped by the scope and harvesting strategies of the analysed institutions. The Internet Archive demonstrates more multilingual content on the Rijksmuseum website and shows that early captures from 2000 to 2004 were considerably more diverse in versioning, with English representing up to half of all accessible pages and several additional languages, including German, French, Spanish, and Italian. From the mid-2000s onward, however, the proportion of other languages declines. After 2012, English became a significant component in the IA snapshots, in separate years representing up to 60 per cent of the web archived content, which is much higher in some years than what is visible from the KB Web Collection.
+The comparison of language prefixes across the two web collections (Figures 13 and 14) shows different preservation profiles shaped by the scope and harvesting strategies of the analysed institutions. The Internet Archive demonstrates more multilingual content on the Rijksmuseum website and shows that early captures from 2000 to 2004 were considerably more diverse in versioning, with English representing up to half of all accessible pages and several additional languages, including German, French, Spanish, and Italian. From the mid-2000s onward, however, the proportion of other languages declines. After 2012, English became a significant component in the IA snapshots, in separate years representing up to 60 per cent of the web archived content, which is much higher in some years than what is visible from the KB Web Collection.
 
 
 In the KB Web Collection, the Dutch prefix dominates most of the years and typically accounts for 70 to 90 per cent of the content and in 2024, it includes about 10 per cent in other languages in the collection. English appears consistently as the secondary language, while all other prefixes occur only sporadically. This pattern reflects both the museum’s stable bilingual publishing strategy and the targeted nature of KB harvesting, which tends to prioritise core pages over multilingual variants.
@@ -749,7 +751,7 @@ In the KB Web Collection, the Dutch prefix dominates most of the years and typic
 Segmentation of URLs helped to identify the core parts of the website, such as ‘collection’, ‘stories’, ‘api’, ‘exhibitions’, and others. Due to the uneven process of web preservation, it is impossible to assess to a certain extent the dominant structures of the website from a historical perspective. However, we are able to evaluate preserved content in the web collections and see the potential of these collections to communicate the content of these structures. 
 
 
-The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
+The visualisation of the segments in the word cloud (Figure 15) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
 ```python jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} tags=["figure-15-*"]
 # === INSTRUCTION ===
@@ -848,7 +850,7 @@ wf_raw = build_word_freq(weights)
 
 plot_wordcloud(
     wf_raw,
-    f"Wordcloud of Top 15 Segments Collected per Year {START_YEAR}–{END_YEAR} (Internet Archive)"
+    f"igure 15. Wordcloud of Top 15 Segments Collected per Year {START_YEAR}–{END_YEAR} (Internet Archive)"
 )
 
 ```
@@ -865,10 +867,10 @@ Adjusting the period, it is possible to see changes in the dominant segments ove
 #### Object Numbers
 
 
-Now consider the segments related to the collection more precisely. Initially, research has been largely motivated by the development of digital collections published by the museum online and the processes around the development of openness. Therefore, it is interesting to look at the artworks in the collections.
+Now consider the segments related to the collection more precisely. Initially, research has been largely motivated by the development of digital collections published by the museum online and the processes around the development of openness. Therefore, it is interesting to look at the representation of artworks in the collections.
 
 
-Some URL strings included the identification number of an object from the collection. The cataloguing practice at the museum represents each object number as a series of capital letters and numbers separated by ‘-‘ or ‘.’ symbols. For example, the self-portrait of Rembrandt van Rijn from the museum collection has an object number SK-A-4691. Algorithmically, these types of codes were identified in the URL strings. To focus the search on the collections, these codes were detected only in strings that include the segments ‘collection’ and ‘collectie’ in the HTML file formats. HTML is important for exploration as a framing page with the core textual and structural information about collections and objects. These codes were identified in both web collections. In the Internet Archive, there are 312.406 object numbers and in 6.282 the KB Web Collection (see Figure 15). The spherical diagram provides an overview of the unique and overlapping object numbers. The KB Web Collection, even being significantly smaller in size, still has unique data, 585 object numbers, not represented in the collection of the Internet Archive.
+Some URL strings included the identification number of an object from the collection. The cataloguing practice at the Rijksmuseum represents each object number as a series of capital letters and numbers separated by ‘-‘ or ‘.’ symbols. For example, the self-portrait of Rembrandt van Rijn from the museum collection has an object number SK-A-4691. Algorithmically, these types of codes were identified in the URL strings. To focus the search on the collections, these codes were detected only in strings that include the segments ‘collection’ and ‘collectie’ in the HTML file formats. HTML is important for exploration as a framing page with the core textual and structural information about collections and objects. These codes were identified in both web collections. In the Internet Archive, there are 312.406 object numbers and in 6.282 the KB Web Collection (see Figure 15). The spherical diagram provides an overview of the unique and overlapping object numbers. The KB Web Collection, even being significantly smaller in size, still has unique data, 585 object numbers, not represented in the collection of the Internet Archive.
 
 ```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)"]}} tags=["figure-16-*"]
 import pandas as pd
@@ -935,11 +937,11 @@ if HAS_VENN:
         x, y = kb_set_label.get_position()
         kb_set_label.set_position((x - 0.08, y + 0.05))
 
-    plt.title("Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)", fontsize=14, pad=15)
+    plt.title("Figure 16. Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)", fontsize=14, pad=15)
     plt.show()
 ```
 
-The amount of object numbers extracted from URL strings that lead to image files is significantly lower than of HTML files. For the Internet Archive, the total number of unique object numbers is 1086, and for the KB Web collection, it is 69. Figure 16 shows overlapping images, where a part of the images from the KB Web Collection does not exist in the collection of the Internet Archive (48 items).
+The amount of object numbers extracted from URL strings that lead to image files is significantly lower than of HTML files. For the Internet Archive, the total number of unique object numbers is 1086, and for the KB Web collection, it is 69. Figure 17 shows overlapping images, where a part of the images from the KB Web Collection does not exist in the collection of the Internet Archive (48 items).
 
 ```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers in the Image subset between the Internet Archive (IA)"]}} tags=["figure-17-*"]
 import pandas as pd
@@ -992,7 +994,7 @@ for label in v.set_labels:
     label.set_fontsize(14)
 
 plt.title(
-    "Overlap of Object Numbers in the Image subset between the Internet Archive (IA) "
+    "Figure 17. Overlap of Object Numbers in the Image subset between the Internet Archive (IA) "
     "and the KB Web Collection (KB)",
     fontsize=14,
     pad=15
@@ -1002,7 +1004,7 @@ plt.show()
 
 ```
 
-Data filtering in the dataset is very high at this stage, because only images that include the ‘collection’ or ‘collectie’ segment are included. They are deduplicated by having one object number across all datasets, regardless of their size and quality. Deduplication included the rule of keeping the most recent record and deleting from the subset of data older versions of the image. Also, these files mainly belong to the earlier period of history of the website, as it is visible from the distribution chart in Figure 17.
+Data filtering in the dataset is very high at this stage, because only images that include the ‘collection’ or ‘collectie’ segment are included. They are deduplicated by having one object number across all datasets, regardless of their size and quality. Deduplication included the rule of keeping the most recent record and deleting from the subset of data older versions of the image. Also, these files mainly belong to the earlier period of history of the website, as it is visible from the distribution chart in Figure 18.
 
 ```python jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-18-*"]
 # Distribution object numbers by years
@@ -1063,7 +1065,7 @@ plt.bar(x + width/2, kb_vals, width, label="KB", color="#DD8452")
 plt.xticks(x, all_years, rotation=90)
 plt.xlabel("Year")
 plt.ylabel("Number of unique object numbers")
-plt.title("Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
+plt.title("Figuer 18. Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
 plt.legend()
 plt.grid(axis="y", alpha=0.3)
 plt.tight_layout()
@@ -1071,154 +1073,34 @@ plt.show()
 
 ```
 
-The absence of object numbers after 2016, as the diagram shows, shows changes in the practice of building the URLs that excluded the object numbers from the string. Using the examples from experimental exploration, it will be highlighted as well. At the same time, this diagram also shows the weaknesses of the URL analysis in addressing changes.
+The absence of object numbers after 2016, as the diagram displays, highlights changes in the practice of building the URLs that excluded the object numbers from the string. Using the examples from experimental exploration, this transition will be discussed further.
 
 
-Based on those URLs, which indicate the image format and include the object number in it, the collage was created that you may see on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept in the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality compared with the high-resolution reproductions available today. At the same time, these images serve as historical evidence of the early web presence of the museum. They give an idea of the visuals that were used for the website and online collection in general, and show the opportunities offered by the technologies of the respective time.
+This diagram also shows the strict limitations of the URL analysis in addressing visual changes. Based on those URLs, which indicate the image format and include the object number in it, the collage was created that you may see on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies of the respective time. However, the preserved data do not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
 
 
 ## Rijksmuseum metadata: Experimental exploration
 
 <!-- #region citation-manager={"citations": {"1y6n3": [{"id": "16470964/DLVWLHZG", "source": "zotero"}], "6lbfd": [{"id": "16470964/YKDCRRJB", "source": "zotero"}], "9d5ln": [{"id": "16470964/YKDCRRJB", "source": "zotero"}], "fobcc": [{"id": "16470964/UXMZXQBE", "source": "zotero"}]}} -->
-To assess the results of object number extraction, the experiment compared the object numbers captured by the crawling institutions with the current museum's database. The Rijksmuseum publishes various datasets on its website for public access (<cite id="fobcc"><a href="#zotero%7C16470964%2FUXMZXQBE">(<i>Rijksmuseum Data Services</i>, n.d.)</a></cite>). Data, provided by the museum, includes the data dumps from different domains (including the museum’s collection and library (<cite id="1y6n3"><a href="#zotero%7C16470964%2FDLVWLHZG">(<i>Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>)). The website also suggests historical data dumps, which provide metadata from 2019 and 2020 (<cite id="9d5ln"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>). Newly published datasets include information about each object, located in separate files, which makes them difficult to explore in bulk. For the experiment, the most recent consistent dataset, organised in a single csv file, dates back to January 2020. It was downloaded from Historical Data Dumps marked as ‘Comma Separated Values object metadata download’ (<cite id="6lbfd"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>) and used in the experiment. 
+An additional experiment was conducted to assess the results of object number extraction. The object numbers captured by the Internet Archive were compared with the museum's database information from the historical data dumps. The Rijksmuseum publishes various datasets on its website for public access (Rijksmuseum Data Services, 2025 noauthor_rijksmuseum_nodate). Data, provided by the museum, includes the data dumps from different domains (including the museum’s collection and library (<cite id="1y6n3"><a href="#zotero%7C16470964%2FDLVWLHZG">(<i>Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>)). The website also suggests historical data dumps, which provide metadata from 2019 and 2020 (<cite id="9d5ln"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>). Newly published datasets include information about each object, located in separate files, which makes them difficult to explore in bulk. For the experiment, the most recent consistent dataset, organised in a single csv file, dates back to January 2020. It was downloaded from Historical Data Dumps marked as ‘Comma Separated Values object metadata download’ (<cite id="6lbfd"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>) and used in the experiment. 
 <!-- #endregion -->
 
-Object numbers, previously separated according to formats (HTML and images) extracted from the URLs datasets of the collection from the Internet Archive and from the KB web collection, were aggregated in a single file per preserving institution, deduplicated and compared with the object numbers from the Rijksmuseum Data Dumps. Results of these experiments are exposed in the table and spherical diagram below (Figure 18). The datasets largely overlap in object numbers, as expected. The majority of the object numbers from the Internet Archive and the KB Web Collection overlap with Rijksmuseum Data Dumps. At the same time, the unexpected result is a large number of unique entries (20.150) in the Internet Archive that are not specific to the data from the Rijksmuseum Data Dumps.
+Object numbers were extracted from the URLs, deduplicated, and compared with the object numbers from the Rijksmuseum Data Dumps. Results of these experiments are presented in the table and spherical diagram below (Figure 19). The datasets largely overlap in object numbers, as expected. At the same time, the unexpected result is a large number of unique entries (8.481) in the Internet Archive that did not match the Rijksmuseum Data Dumps.
 
 ```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers between Rijksmuseum API (API) vs the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-19-*"]
-import os
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib_venn import venn3
-from matplotlib.table import Table
+from IPython.display import Image, display
 
 
-TABLE_HEADER_HEIGHT = 0.035
-TABLE_ROW_HEIGHT    = 0.025
 
-TABLE_Y0     = 0.20
-TABLE_HEIGHT = 0.60
-
-# === 1. Load statistics ===
-stats_path = "./media/API_IA_KB_statistics_full.csv"
-stats = pd.read_csv(stats_path)
-stats_dict = dict(zip(stats["metric"], stats["value"]))
-
-# === 2. Table data ===
-table_data = [
-    ["API total",  stats_dict["API_count"]],
-    ["IA total",   stats_dict["IA_count"]],
-    ["KB total",   stats_dict["KB_count"]],
-    ["API ∩ IA",   stats_dict["API∩IA"]],
-    ["API only",   stats_dict["region_100_API_only"]],
-    ["IA only",    stats_dict["region_010_IA_only"]],
-    ["KB only",    stats_dict["region_001_KB_only"]],
-    ["All 3 sets", stats_dict["region_111_all_three"]],
-]
-
-# === 3. Venn subsets ===
-subsets = (
-    stats_dict["region_100_API_only"],
-    stats_dict["region_010_IA_only"],
-    stats_dict["region_110_API_IA"],
-    stats_dict["region_001_KB_only"],
-    0,
-    0,
-    stats_dict["region_111_all_three"]
-)
-
-# === 4. Layout ===
-fig = plt.figure(figsize=(20, 10))
-gs = fig.add_gridspec(1, 2, width_ratios=[0.10, 0.90])
-
-ax_table = fig.add_subplot(gs[0, 0])
-ax_venn  = fig.add_subplot(gs[0, 1])
-
-# ======================================================
-# LEFT PANEL — TABLE
-# ======================================================
-ax_table.axis("off")
-
-tbl = Table(ax_table, bbox=[0.0, TABLE_Y0, 1.0, TABLE_HEIGHT])
-
-col_w = [0.07, 0.05]
-
-tbl.add_cell(0, 0, width=col_w[0], height=TABLE_HEADER_HEIGHT,
-             text="Indicator", loc="center", facecolor="#d0d0d0")
-tbl.add_cell(0, 1, width=col_w[1], height=TABLE_HEADER_HEIGHT,
-             text="Value", loc="center", facecolor="#d0d0d0")
-
-for i, (name, value) in enumerate(table_data, start=1):
-    tbl.add_cell(i, 0, width=col_w[0], height=TABLE_ROW_HEIGHT,
-                 text=name, loc="left", facecolor="white")
-    tbl.add_cell(i, 1, width=col_w[1], height=TABLE_ROW_HEIGHT,
-                 text=str(value), loc="center", facecolor="white")
-
-tbl.auto_set_font_size(False)
-tbl.set_fontsize(12)
-tbl.scale(1.10, 1.0)
-
-ax_table.add_table(tbl)
-
-# ======================================================
-# RIGHT PANEL — Venn Diagram
-# ======================================================
-v = venn3(subsets=subsets, set_labels=("API", "IA", "KB"), ax=ax_venn)
-
-if v.set_labels:
-    for lbl in v.set_labels:
-        if lbl:
-            lbl.set_fontsize(12)
-
-if v.subset_labels:
-    for lbl in v.subset_labels:
-        if lbl:
-            lbl.set_fontsize(12)
-
-ax_venn.set_title(
-    "Overlap of Object Numbers between Rijksmuseum API (API) vs the Internet Archive (IA) vs the KB Web Collection (KB)",
-    fontsize=14,
-    loc="left"
-)
-
-ax_venn.set_aspect("equal", "box")
-ax_venn.set_xlim(-0.70, 0.70)
-ax_venn.set_ylim(-0.70, 0.70)
-
-# === MOVE SUBSET LABELS ===
-def shift(r, dx, dy):
-    lab = v.get_label_by_id(r)
-    if lab:
-        x, y = lab.get_position()
-        lab.set_position((x + dx, y + dy))
-
-shift("100", -0.04, 0.00)
-shift("010",  0.04, 0.03)
-shift("001",  0.02, 0.00)
-shift("110",  0.02, -0.02)
-shift("111",  0.04, -0.03)
-
-# === MOVE SET LABELS (API, IA, KB) ===
-def shift_set(idx, dx, dy):
-    lbl = v.set_labels[idx]
-    if lbl:
-        x, y = lbl.get_position()
-        lbl.set_position((x + dx, y + dy))
-
-shift_set(0, 0.20,  0.03)   # API
-shift_set(1,  0.12,  -0.15)   # IA
-shift_set(2,  0.05, 0.00)   # KB
-
-plt.tight_layout()
-plt.show()
+display(Image("./media/Figure_19.png"))
 
 ```
 
 <!-- #region citation-manager={"citations": {"l8k1d": [{"id": "16470964/HIK6TB4G", "source": "zotero"}], "yghxs": [{"id": "16470964/8KIDPTAV", "source": "zotero"}]}} -->
-Distribution of the object numbers obtained from the URL strings over time, displayed in the diagram above, shows that most of them were captured by the Internet Archive and the KB before the Rijksmuseum shaped and released the dataset in 2020. They are concentrated on the timeline of the observing web collections only before 2016. Therefore, they should be represented in the Rijksmuseum Data Dumps. Selecting the object numbers randomly allowed us to find some data missing from the Data Dumps but present in the Rijksmuseum collection online. For example, object number AK-MAK-1349-H is specific to the book with sketches by Katsushika Hokusai (<cite id="yghxs"><a href="#zotero%7C16470964%2F8KIDPTAV">(<i>Schetsen van Hokusai - Deel 14</i>, n.d.)</a></cite>). However, some of these randomly selected numbers were missing in the same form but returned with additional prefixes (for example, object number “BI-1890-2974-A-13” exists in the collection as BI-1890-2974-A-13(V), and it is designated to the artwork “Lossen van tonnen op een afgemeerd zeilschip” (<cite id="l8k1d"><a href="#zotero%7C16470964%2FHIK6TB4G">(Schotel, n.d.)</a></cite>). This example shows that the method of extracting object numbers was imperfect and shortened a part of the object number located in parentheses "()". At the same time, it was also discovered that the museum changed its practice of including the object numbers in the URLs for building the collection online by indicating their titles in the URL strings and adding an encoded ending to the URL to standardise the string for more convenient operation of the website.
+Selecting the object numbers randomly allowed us to find some data missing from the Data Dumps but present in the Rijksmuseum collection online. For example, object number AK-MAK-1349-H is specific to the book with sketches by Katsushika Hokusai (Schetsen van Hokusai, 2026 noauthor_schetsen_nodate). However, some of these randomly selected numbers were missing in the same form but returned with additional prefixes (for example, object number “BI-1890-2974-A-13” exists in the collection as BI-1890-2974-A-13(V), and it is designated to the artwork “Lossen van tonnen op een afgemeerd zeilschip” (Schotel, 2026 schotel_lossen_nodate). This example shows that the method of extracting object numbers was imperfect and excluded the object numbers with parentheses “()”. At the same time, it was also discovered that the museum changed its practice of including the object numbers in the URLs for building the collection online, instead indicating their titles in the URL strings and adding an encoded ending to the URL to standardise the string for more convenient operation of the website.
 <!-- #endregion -->
 
-The randomly selected object numbers that were indicated as missing in both the Rijksmuseum Data Dumps and the museum’s collection online were also searched on Wikidata. Some of them returned in the search system, being labelled as a part of the Rijksmuseum collection. For example, the object number “SK-A-3507”, which is unique to the collection from the Internet Archive, was missing again in both the Rijksmuseum Data Dumps and the Rijksmuseum collection online (see Figure 19). 
+The randomly selected object numbers that were indicated as missing in both the Rijksmuseum Data Dumps and the museum’s collection on the live web were also searched on Wikidata. Some of them returned in the search system, being labelled as part of the Rijksmuseum collection. Such an example is the object with the object number “SK-A-3507”, which is unique to the web collection from the Internet Archive and is missing again in both the Rijksmuseum Data Dumps and the Rijksmuseum collection online (see Figure 20).
 
 ```python jdh={"module": "object", "object": {"source": ["Screenshot of search results for object number SK-A-3507 on the Rijksmuseum website"]}} tags=["figure-20-*"]
 from IPython.display import Image, display
@@ -1227,7 +1109,7 @@ display(Image("./media/SK-A-3507.JPG"))
 ```
 
 <!-- #region citation-manager={"citations": {"cx4a4": [{"id": "16470964/ECDVEF9E", "source": "zotero"}]}} -->
-However, it was discovered on Wikimedia as the “File:Kaïn en Abel Rijksmuseum SK-A-3507.jpeg”, titled in summary as “Willem de Zwart: Kaïn en Abel” and labelled by 'accession number' SK-A-3507. Also, the description indicated that the painting belonged to the Rijksmuseum collection (<cite id="cx4a4"><a href="#zotero%7C16470964%2FECDVEF9E">(<i>File:Kaïn En Abel Rijksmuseum SK-A-3507.Jpeg</i>, n.d.)</a></cite>). This finding raises questions about the museum's documentation practices, as it is not yet transparent at the moment whether the painting remains in the collection. It was not found on the Rijksmuseum collection online under the title or in the collection devoted to the painter, Willem de Zwart.
+However,  the object was discovered on Wikimedia as the “File:Kaïn en Abel Rijksmuseum SK-A-3507.jpeg”, titled in summary as “Willem de Zwart: Kaïn en Abel” and labelled by 'accession number' SK-A-3507. Also, the description indicated that the painting belonged to the Rijksmuseum collection (File:Kaïn en Abel 2026 noauthor_filekain_nodate)). This finding raises questions about the museum's documentation practices, as it is not yet transparent at the moment whether the painting remains in the collection. It was not found on the Rijksmuseum collection online under the title, nor in the collection devoted to the painter, Willem de Zwart.
 <!-- #endregion -->
 
 ## Discussion
@@ -1236,10 +1118,10 @@ However, it was discovered on Wikimedia as the “File:Kaïn en Abel Rijksmuseum
 The findings brought the following insights to the discussion.
 
 <!-- #region citation-manager={"citations": {"k905d": [{"id": "16470964/39UN8I6R", "source": "zotero"}], "xafee": [{"id": "16470964/W6TNPHKL", "source": "zotero"}]}} -->
-First of all, the preserved portion of the museum's website in the web collections is significantly smaller in comparison with the website that existed on the web. It is possible to assess the volume of drastically underrepresented materials in web collections by comparing the number of uploads of the collection objects to the website (traced by the dynamically shaped numbers from the database, explained above). Even a quick look at the data shows that the web collections for the period before 2018 do not cover even 10% of the website. The scholars admit that it is difficult, if not impossible, to assess the website's true size on the live web from a historical perspective (<cite id="k905d"><a href="#zotero%7C16470964%2F39UN8I6R">(Brügger, 2018)</a></cite>; <cite id="xafee"><a href="#zotero%7C16470964%2FW6TNPHKL">(Milligan, 2024)</a></cite>). The Rijksmuseum's approach to displaying data is a rare example of such a case, when such an assessment is possible. However, after changing the structure of the website after 2024, these numbers are not available. This brings to the question about the ephemerality of data points that support historical reconstruction and the dependence of web-historical analysis on design and infrastructural decisions made by cultural institutions. When indicators such as dynamically generated object counts disappear due to changes in the web infrastructure, the possibility of retrospectively estimating the scale of a website is effectively lost.
+First of all, the preserved portion of the museum's website in the web collections is significantly smaller than the website that existed on the live web. The scholars admit that it is difficult or even impossible to assess the website's true size on the live web from a historical perspective (Brügger, 2018 brugger_archived_2018; Milligan, 2024 milligan_averting_2024). However, for the Rijksmuseum, it is partly feasible to evaluate the volume of drastically underrepresented materials in web collections by comparing the number of uploads of collection objects to the website, as documented by dynamically generated numbers from the database, reflected in the archived web snapshots. Data show that the web collections for the period before 2018 do not cover even 10% of the website from the live web at that time. The Rijksmuseum's approach to displaying this information on the website is a rare but valuable practice. After the structure of the website was changed in 2024, this information about the size of the database became hidden. This brings to the question about the ephemerality of data points that support historical reconstruction and the dependence of web-historical analysis on design and infrastructural decisions made by cultural institutions. When indicators such as dynamically generated object counts disappear due to changes in the web infrastructure, the possibility of retrospectively estimating the scale of a website is effectively lost.
 <!-- #endregion -->
 
-Another issue related to the redesign of the website and other infrastructural decisions refers to shifts in shaping the URL structure. This is specific to the period after 2018. Changes in the URL structure, and particularly replacing the object number with the title of an object and encoding a part of the string to standardise a URL, made it difficult to analyse URLs using automated techniques due to the many unique values, complicated segmentation  with extremely long and complex segments to extract meanings. Moreover, Rijksmuseum actively uses JavaScript to make the website visually attractive - it helps shape content dynamically, makes it easier to adjust content to different types of mobile devices, and supports different interactive features. However, such complexity makes it difficult for crawling tools used by web archiving institutions to capture the website. This happens because much of the content, especially images, is loaded from external resources integrated into the website through JavaScript. The issue is even more multilayered due to the vulnerability of the websites to external invasions and the need to protect infrastructures from malicious actions. This is why institutions limit external crawls. Statistics on the Wayback Machine (Wayback Machine, 2026 noauthor_wayback_nodate) show that the number of captures by the Internet Archive drastically decreased after 16 May 2025. Probably, the Rijksmuseum at that time introduced specific measures against external crawling.
+Another issue related to the redesign of the website and other infrastructural decisions concerns to shifts in how the URL structure is shaped. This is specific to the period after 2018. Changes in the URL structure, and particularly replacing the object number with the title of an object and encoding a part of the string to standardise a URL, made it difficult to analyse URLs using automated techniques due to the many unique values, complicated segmentation  with extremely long and complex segments to be able to extract meanings. Moreover, the Rijksmuseum actively uses JavaScript to make the website visually attractive - JavaScript shapes content dynamically, makes it easier to adjust content to different types of mobile devices, and supports different interactive features. However, using JavaScript in the website architecture makes it difficult, and rather impossible, for crawling tools to capture the website by web archiving institutions. This happens because much of the content, especially images, is loaded from external resources that are integrated into the website via JavaScript. The issue is even more multi-layered in its complexity due to the general vulnerability of the websites to external invasions and the need to protect infrastructures from malicious actions. This is why institutions limit external crawls. Statistics on the Wayback Machine (Wayback Machine, 2026 noauthor_wayback_nodate) show that the number of captures by the Internet Archive drastically decreased after 16 May 2025. Probably, the Rijksmuseum at that time introduced specific measures against external crawling.
 
 
 Analysis of the reflection of the museum objects in web collections exposed not only a smaller representation of the captured information in comparison with the collection on the live web, but also primarily preserved information about the objects in textual formats (HTML) rather than images. Precise assessment of the images has not been a part of this research, but it is important to note that analysis of the images from web collections is not a trivial task. The sub-sets with image URLs refer to all kinds of images, not only to the artworks and visuals to highlight events, but also to the elements of design. The resolution of images significantly changed over time, and today the museum offers hundreds of thousands of artworks in high and even ultra-high resolution for download through the museum's website. However, the images that constitute the website, often in low resolution, still have value and serve as evidence of how the museum visually represented itself on the live web at a certain moment in time. A part of such images provides a record of interface choices, design elements, and visual conventions that structured the website visually, and these details are unique, being in the web collections only as they are not preserved in museum datasets.
@@ -1251,6 +1133,9 @@ A comparative study of the web collections shows that both collections contribut
 An experiment to align the web-archived data with the current museum’s data revealed overlaps but also uncovered unexpected results, when a large portion of object numbers were not identified in the museum’s data. On the one hand, it exposed a limitation of the methodological approach. On the other hand, it demonstrated a lack of transparency in the current documentation practices for how catalogues are updated and how the movement of artworks in the museum can be traced. This discrepancy highlights the weakness of relying exclusively on contemporary datasets to reconstruct earlier states of online collections, as objects may be removed, reattributed, or otherwise transformed without publicly accessible records about these changes.
 <!-- #endregion -->
 
+This research finding, therefore, contributes to the debate in museum studies about what information should be documented for collection objects and what additional information should be added when the collection is made available online. Rother et al. (2026 rother_provenance_accountability_2026) observe that even where museums have invested in digital cataloguing, the information published online has tended to remain limited to tombstone data, meaning basic identifying fields such as creator, title, dimensions, and accession number, while provenance information and records of institutional decisions about objects have remained largely absent from public-facing digital records. However, publishing collections online creates new expectations of transparency and accountability that analogue documentation practices were not designed to meet (Rother et al., 2026 rother_provenance_accountability_2026). The British Museum theft case, in which objects went undetected for over a decade because they were uncatalogued and therefore not published online, as considered by Rother et al. (2026 rother_provenance_accountability_2026), illustrates how the absence of digital documentation has direct consequences. The discrepancies uncovered in the present study — object numbers present in web archives and on Wikimedia but absent from the museum’s own data dumps — point to a related problem. The research underscores the urgency of practical steps to make museum practices more transparent. The absence of publicly accessible records about how online catalogues are updated and how objects are reattributed constitutes a significant issue in the current state of museum documentation. This issue is debated as being specific to the museum sector, which has to undergo change (Durrant, 2026 durrant_deaccessioning_museum_objects_2026; Economou & Kist, 2024 economou_practice_architectures_2024; Park, 2023 park_we_want_to_know_more_2023). Moreover, the absence of information specific to the digital presence of the museum collection limits opportunities to analyse its development over time. Jones (2018 jones_catalogues_contextual_networks_2018) has argued that effective museum documentation should be “more effectively historicized and linked to evidence,” capturing not only what objects are in a collection but the relational and contextual knowledge surrounding them — including records of institutional decisions, changes in classification, publishing online or the movement of objects. The present study suggests that this kind of historicized documentation is currently absent not only from the Rijksmuseum’s collection management system but also from the web-archival record.
+
+
 ## Limitations
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
@@ -1258,19 +1143,19 @@ Relying on URL analysis for large-scale exploration and comparison of web collec
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-Another limitation concerns the instability and ambiguity of URLs themselves. URL structures change over time as websites are redesigned or reorganised. At the same time, there is a lack of records about these changes, and they can only be revealed during exploratory research. In addition, segments or specific entities, identified within URLs, can shift in meaning across periods. For example, the same prefix may function as a language indicator for different languages (e.g., “uk” as British English in the beginning of the 2000s versus Ukrainian in recent years) and such semantic differences are not detectable through automated processing alone. In this project, the need to differentiate these cases became evident only during inspection of the dataset, confirming that URL interpretation often requires iterative validation and contextual knowledge.
+Another limitation concerns the instability and ambiguity of URLs themselves. URL structures change over time as websites are redesigned or reorganised. At the same time, there is a lack of official records about these changes, and they can only be revealed during exploratory research. In addition, segments or specific entities, identified within URLs, can shift in meaning across periods. For example, the same prefix may function as a language indicator for different languages (e.g., “uk” as British English at the beginning of the 2000s versus Ukrainian in recent years), and such semantic differences are not detectable through automated processing alone. In this project, the need to differentiate these cases became evident only during inspection of the dataset, confirming that URL interpretation often requires iterative validation and contextual knowledge.
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-Rijksmuseum maintains a large and complex website, and sustainable functioning requires certain solutions, such as standardising URLs and encoding their fragments when a part of the string is translated into an encoded identifier. Interpretation of the encoded information requires knowledge of the applied encoding schemes for their decoding and making them suitable for analysis. At the moment, the specific encoding schemes that have been implemented are unknown, and attempts to decode by applying some popular schemes were not effective, so information in these elements remained inaccessible for interpretation. 
+The Rijksmuseum maintains a large and complex website, whose sustainable functioning prescribes certain solutions, such as standardising URLs and encoding their fragments when parts of the string are translated into encoded identifiers. Interpretation of the encoded information requires knowledge of the applied encoding schemes for their decoding and making them suitable for analysis. At the moment, the specific encoding schemes that have been implemented are unknown, and attempts to decode by applying some popular schemes were not effective, so information in these elements remained inaccessible for interpretation. 
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-Using JavaScript in constructing the website introduces another constraint. Rijksmuseum relies on JavaScript to load content dynamically, which assumes linking to external services. Such dependencies cannot be consistently captured during archiving the web. Such functional relationships between pages and the external infrastructures that enable them are disrupted in web archives, and as a result, the web-archived collections and external platforms are disconnected, making it impossible to recollect the content. It leads to poorer preservation of born-digital heritage and increases the risk of being lost.
+Using JavaScript in constructing the website introduces another constraint. The Rijksmuseum relies on JavaScript to load content dynamically, which assumes linking to external services. Such dependencies cannot be consistently captured during web archiving. Such functional relationships between pages and the external infrastructures that enable them are disrupted in web archives, and as a result, the web-archived collections and external platforms are disconnected, making it impossible to recollect the content. It leads to poorer preservation of born-digital heritage and increases the risk of being lost.
 <!-- #endregion -->
 
 <!-- #region citation-manager={"citations": {"nmbt2": [{"id": "16470964/89MVQTWX", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-The preprocessing and cleaning steps involve an additional methodological limitation. In particular, deduplication based on CDX “digest” values can produce false negatives (<cite id="nmbt2"><a href="#zotero%7C16470964%2F89MVQTWX">(<i>Internet Archive Forums: CDX Digest Not Accurately Capturing Duplicates?</i>, 2014)</a></cite>), for example, by identifying captures as distinct even when they represent duplicates. This issue, acknowledged by the Internet Archive, may affect counts and the data. In the study, the effect is expected to be mild and does not alter the main qualitative patterns, but it should be taken into account in further steps.
+The pre-processing and cleaning steps involve an additional methodological limitation. In particular, deduplication based on CDX “digest” values can produce false negatives (Internet Archive Forums, 2014), for example, by identifying captures as distinct even when they represent duplicates. This issue, acknowledged by the Internet Archive, may affect counts and the data. In the study, the effect is expected to be mild and does not alter the main qualitative patterns, but it should be taken into account in further steps.
 <!-- #endregion -->
 
 ## Conclusion
@@ -1279,15 +1164,15 @@ The preprocessing and cleaning steps involve an additional methodological limita
 This study revealed significant gaps and inconsistencies in the web-archived records of the Rijksmuseum’s website preserved by the Internet Archive and in the KB Web Collection. Although web collections provide broad temporal coverage, they unevenly preserve websites, capturing only fragments, which in some years constitute only an insignificant part of the website’s volume on the live web. As a result, substantial portions of the content are absent from the historical record, making it difficult to reconstruct the museum’s presence on the web. 
 
 <!-- #region citation-manager={"citations": {"qqapr": [{"id": "16470964/LSI6BGG4", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-The interpretation of the findings raises questions about responsibility for preserving born-digital heritage, as external web-crawling approaches are constrained in what they can capture. Museums, aiming at creating visually attractive websites, implement complex technological solutions, which cause specific challenges for capturing content. Also, cybersecurity measures to prevent unauthorised access to vulnerable infrastructure further complicate, disrupt, or even disable external crawling processes. The other factor here is the size of the website and volume of the content, which requires certain capacities for capturing and storing. The web archiving institutions try to address these and other challenges by applying sophisticated practices in crawling and controlling the processes. Legal conditions may vary as well, contributing to the complexity of web preservation. The KB has a legal responsibility for web preservation, but it is limited in different ways to support the national crawl. At the moment, the KB operates under a 'voluntary deposit' system (<cite id="qqapr"><a href="#zotero%7C16470964%2FLSI6BGG4">(<i>FAQ about the Strategy for the Formation of the National Library Collection 2024-2030 | KB, National Library of the Netherlands</i>, n.d.)</a></cite>), and the current approach is creating curated web collections, which are limited in scope, as the research results expose. Having more support from the Dutch legislative side, such as accepting the legal deposit law and providing a mandate for a national crawl, as well as developing and maintaining more extensive infrastructure for these purposes, might boost the preservation of the Dutch web.
+The interpretation of the findings raises questions about responsibility for preserving born-digital heritage, as external web-crawling approaches are constrained in what they can capture. Museums, aiming at creating visually attractive websites, implement complex technological solutions, which cause specific challenges for capturing content. Also, cybersecurity measures to prevent unauthorised access to vulnerable infrastructure further complicate, disrupt, or even disable external crawling processes. The other factor here is the size of the website and the volume of the content, which requires certain capacities for capturing and storing. Web archiving institutions try to address these and other challenges by applying sophisticated practices for crawling and process control. Legal conditions may vary as well, contributing to the complexity of web preservation. The KB has a legal responsibility for web preservation, but its support for the national-wide crawl is limited in various ways. At the moment, the KB operates under a ‘voluntary deposit’ system (FAQ, 2026), and the current approach is creating curated web collections, which are limited in scope, as the research results confirmed. Having more support from the Dutch legislative side, such as accepting the legal deposit law and providing a mandate for a national crawl, as well as developing and maintaining more extensive infrastructure for these purposes, might boost the preservation of the Dutch web and improve the coverage.
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-At the same time, the responsibility for preserving the born-digital heritage by cultural institutions should also be negotiated. Museums serve as producers of born-digital heritage, including digitised artworks, metadata, digital exhibitions, websites and various web-based projects, which are under the threat of being lost. Since museums have authority and full access to their digital resources and infrastructures, their responsibilities in preservation could be expanded. Due to the ever-increasing complexity of websites and the sophisticated technologies used to produce and design them, it becomes increasingly difficult for external institutions and services to preserve them.  If museums do not take responsibility for their preservation, there is a significant risk that this heritage will be lost. Web archiving institutions, such as the Internet Archive and the KB, do not guarantee the completeness of preservation, and this research exposed these gaps and the enormous loss of web materials in the past. Therefore, action is needed to negotiate and collaboratively contribute more effectively to the preservation of web heritage. The Rijksmuseum preserves media in original resolution and makes them publicly available, which is already a significant contribution to preserving the heritage by digitising it. At the same time, as they shape their own digital infrastructure, the museums are unique in their position and able to retain all the elements of the website, including databases and other media, not just rendered pages, and preserve this complexity more authentically.
+At the same time, the responsibility for preserving the born-digital heritage by cultural institutions should also be negotiated. Museums serve as producers of born-digital heritage, including digitised artworks, metadata, digital exhibitions, websites, and various web-based projects, which are at risk of being lost. Since museums have authority and full access to their digital resources and infrastructures, their responsibilities in preservation could be expanded. Due to the ever-increasing complexity of websites and the sophisticated technologies used to produce and design them, it becomes increasingly difficult for external institutions and services to preserve them.  If museums do not take responsibility for preserving this heritage, there is a significant risk that it will disappear. Web archiving institutions, such as the Internet Archive and the KB, do not guarantee the completeness of preservation, and this research exposed these gaps and the enormous loss of web materials in the past. Therefore, action is needed to negotiate and collaboratively contribute more effectively to the preservation of web heritage. The Rijksmuseum preserves media in original resolution and makes them publicly available, which is already a significant contribution to preserving the heritage by digitising it. At the same time, as they shape their own digital infrastructure, the museums are unique in their position and able to retain all the elements of the website, including databases and other media, not just rendered pages, and preserve this complexity more authentically.
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-The use and reuse of digital and web heritage would benefit from more thorough documentation, both in museums and in web archiving institutions. Documentation is a necessary practice that needs further development. From the perspective of museums, such documentation might provide more transparency about decisions and actions that affect cataloguing practices, such as changes in the catalogue's structure and metadata, reclassification of objects, or providing details on the movement of museum objects. Also, documenting the technical dependencies, actions, and practices involved in building and maintaining the museum’s web environment, including the use of content management systems, APIs, JavaScript frameworks, and other infrastructural components. Such documentation might support research and preservation efforts. These records are useful for external web archiving to adjust crawlers accordingly and also serve as a historical record of developing infrastructures. In the context of the history of technology and museum informatics, such documentation would serve as historical evidence and provide a basis for tracing technological solutions and institutional practices over time. On the side of external institutions that crawl and preserve the web, documentation is also needed. Systematic documentation, by exposing directly what is captured and what is omitted, might strengthen source criticism and critical research inquiry. Technical characteristics such as depth of crawl, frequency, scope, seeds selection, rules of exclusion and handling of dynamic content, and treatment of external resources are crucial for supporting web researchers in source criticism to assess completeness and biases more explicitly.
+The use and reuse of digital and web heritage would benefit from more thorough documentation, both in museums and in web archiving institutions. Documentation is a necessary practice that needs further development. From the perspective of museums, such documentation might provide more transparency about decisions and actions that impact cataloguing practices, such as changes in the catalogue's structure and metadata, reclassification of objects, or providing details on the movement of museum objects. Also, documenting the technical dependencies, actions, and practices involved in building and maintaining the museum’s web environment, including the use of content management systems, APIs, JavaScript frameworks, and other infrastructural components. Such documentation might support research and preservation efforts. These records are useful for external web archiving to adjust crawlers accordingly and also serve as a historical record of the development of infrastructure. In the context of the history of technology and museum informatics, such documentation would serve as historical evidence and provide a basis for tracing technological solutions and institutional practices over time. On the side of external institutions that crawl and preserve the web, documentation is also needed. Scholars argue that documenting crawl provenance, collection scope, and the often tacit technical conditions of web archiving is necessary to interpret absences and biases in web archives and to conduct source criticism of archived web materials (Maemura et al., 2018 maemura_if_these_crawls_2018;  Ogden & Maemura, 2021 ogden_go_fish_2021). Systematic documentation, by exposing directly what is captured and what is omitted, might strengthen source criticism and critical research inquiry. Technical characteristics such as depth of crawl, frequency, scope, seeds selection, rules of exclusion and handling of dynamic content, and treatment of external resources are crucial for supporting web researchers in source criticism to assess completeness and biases more explicitly.
 <!-- #endregion -->
 
 ## Acknowledgement
