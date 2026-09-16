@@ -141,7 +141,7 @@ plt.plot(years, df["total_artworks"],
 plt.plot(years, df["rijksstudios"],
          marker="o", label="Rijksstudio's")
 
-plt.title("igure 3. Rijksmuseum: Artworks Online and Rijksstudio's Entries")
+plt.title("Rijksmuseum: Artworks Online and Rijksstudio's Entries")
 plt.xlabel("Year")
 plt.ylabel("Count")
 plt.grid(True, linestyle="--", linewidth=0.5)
@@ -297,7 +297,7 @@ else:
     plt.bar(x - width / 2, df_zoom["IA"].to_numpy(), width, label="IA")
     plt.bar(x + width / 2, df_zoom["KB"].to_numpy(), width, label="KB")
 
-    plt.title(f"Figure 8. Total URLs per Year ({START_YEAR}–{END_YEAR})", fontsize=14)
+    plt.title(f"Total URLs per Year ({START_YEAR}–{END_YEAR})", fontsize=14)
     plt.xlabel("Year")
     plt.ylabel("Number of URLs")
     plt.xticks(x, labels, rotation=45)
@@ -604,7 +604,7 @@ plt.xticks(x, year_cols, rotation=75)
 plt.xlabel("Year")
 plt.ylabel("Proportion (%)")
 plt.yticks(np.linspace(0, 1, 6), [f"{int(v*100)}%" for v in np.linspace(0, 1, 6)])
-plt.title("igure 13. Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
+plt.title("Language Prefix Proportions by Year, 100% stacked (Internet Archive)")
 
 # === 9. Place legend INSIDE the empty space (2005–2011 area) ===
 # Adjust x,y here if needed → (0.45, 0.55) means:
@@ -712,7 +712,7 @@ plt.xticks(x, all_years, rotation=75)
 plt.xlabel("Year")
 plt.ylabel("Proportion (%)")
 plt.yticks(np.linspace(0, 1, 6), [f"{int(v*100)}%" for v in np.linspace(0, 1, 6)])
-plt.title("igure 14. Language Prefix Proportions by Year, 100% stacked (KB Web Collection)")
+plt.title("Language Prefix Proportions by Year, 100% stacked (KB Web Collection)")
 
 # === 9. Legend inside the plot ===
 plt.legend(
@@ -850,7 +850,7 @@ wf_raw = build_word_freq(weights)
 
 plot_wordcloud(
     wf_raw,
-    f"igure 15. Wordcloud of Top 15 Segments Collected per Year {START_YEAR}–{END_YEAR} (Internet Archive)"
+    f"Wordcloud of Top 15 Segments Collected per Year {START_YEAR}–{END_YEAR} (Internet Archive)"
 )
 
 ```
@@ -937,7 +937,7 @@ if HAS_VENN:
         x, y = kb_set_label.get_position()
         kb_set_label.set_position((x - 0.08, y + 0.05))
 
-    plt.title("Figure 16. Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)", fontsize=14, pad=15)
+    plt.title("Overlap of Object Numbers between the Internet Archive (IA) and the KB Web Collection (KB)", fontsize=14, pad=15)
     plt.show()
 ```
 
@@ -994,7 +994,7 @@ for label in v.set_labels:
     label.set_fontsize(14)
 
 plt.title(
-    "Figure 17. Overlap of Object Numbers in the Image subset between the Internet Archive (IA) "
+    "Overlap of Object Numbers in the Image subset between the Internet Archive (IA) "
     "and the KB Web Collection (KB)",
     fontsize=14,
     pad=15
@@ -1065,7 +1065,7 @@ plt.bar(x + width/2, kb_vals, width, label="KB", color="#DD8452")
 plt.xticks(x, all_years, rotation=90)
 plt.xlabel("Year")
 plt.ylabel("Number of unique object numbers")
-plt.title("Figuer 18. Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
+plt.title("Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
 plt.legend()
 plt.grid(axis="y", alpha=0.3)
 plt.tight_layout()
