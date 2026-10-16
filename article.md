@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-<!-- #region editable=true slideshow={"slide_type": ""} tags=["title"] -->
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 # How Open is the Rijksmuseum? Web Archives, Documentation, and the Historical Record of Online Collections
 <!-- #endregion -->
 
@@ -22,7 +22,7 @@ jupyter:
 Technical University of Darmstadt
 <!-- #endregion -->
 
-<!-- #region tags=["copyright"] -->
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 [![cc-by](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/) 
 © Nadezhda  Povroznik. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the [Creative Commons Attribution License CC-BY](https://creativecommons.org/licenses/by/4.0/)
 
@@ -1079,11 +1079,12 @@ The absence of object numbers after 2016, as the diagram displays, highlights ch
 
 This diagram also shows the strict limitations of the URL analysis in addressing visual changes. Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 ## Rijksmuseum metadata: Experimental exploration
+<!-- #endregion -->
 
-<!-- #region citation-manager={"citations": {"1y6n3": [{"id": "16470964/DLVWLHZG", "source": "zotero"}], "6lbfd": [{"id": "16470964/YKDCRRJB", "source": "zotero"}], "9d5ln": [{"id": "16470964/YKDCRRJB", "source": "zotero"}]}} -->
-An additional experiment was conducted to assess the results of object number extraction. The object numbers captured by the Internet Archive were compared with the museum's database information from the historical data dumps. The Rijksmuseum publishes various datasets on its website for public access (Rijksmuseum Data Services, 2025 noauthor_rijksmuseum_nodate). Data, provided by the museum, includes the data dumps from different domains (including the museum’s collection and library (<cite id="1y6n3"><a href="#zotero%7C16470964%2FDLVWLHZG">(<i>Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>)). The website also suggests historical data dumps, which provide metadata from 2019 and 2020 (<cite id="9d5ln"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>). Newly published datasets include information about each object, located in separate files, which makes them difficult to explore in bulk. For the experiment, the most recent consistent dataset, organised in a single csv file, dates back to January 2020. It was downloaded from Historical Data Dumps marked as ‘Comma Separated Values object metadata download’ (<cite id="6lbfd"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>) and used in the experiment. 
+<!-- #region citation-manager={"citations": {"1y6n3": [{"id": "16470964/DLVWLHZG", "source": "zotero"}], "6lbfd": [{"id": "16470964/YKDCRRJB", "source": "zotero"}], "9d5ln": [{"id": "16470964/YKDCRRJB", "source": "zotero"}], "valpj": [{"id": "16470964/UXMZXQBE", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} -->
+An additional experiment was conducted to assess the results of object number extraction. The object numbers captured by the Internet Archive were compared with the museum's database information from the historical data dumps. The Rijksmuseum publishes various datasets on its website for public access (<cite id="valpj"><a href="#zotero%7C16470964%2FUXMZXQBE">(<i>Rijksmuseum Data Services</i>, n.d.)</a></cite>). Data, provided by the museum, includes the data dumps from different domains (including the museum’s collection and library (<cite id="1y6n3"><a href="#zotero%7C16470964%2FDLVWLHZG">(<i>Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>). The website also suggests historical data dumps, which provide metadata from 2019 and 2020 (<cite id="9d5ln"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>). Newly published datasets include information about each object, located in separate files, which makes them difficult to explore in bulk. For the experiment, the most recent consistent dataset, organised in a single csv file, dates back to January 2020. It was downloaded from Historical Data Dumps marked as ‘Comma Separated Values object metadata download’ (<cite id="6lbfd"><a href="#zotero%7C16470964%2FYKDCRRJB">(<i>Historical Data Dumps | Rijksmuseum Data Services</i>, n.d.)</a></cite>) and used in the experiment.
 <!-- #endregion -->
 
 Object numbers were extracted from the URLs, deduplicated, and compared with the object numbers from the Rijksmuseum Data Dumps. Results of these experiments are presented in the table and spherical diagram below (Figure 18). The datasets largely overlap in object numbers, as expected. At the same time, the unexpected result is a large number of unique entries (8.481) in the Internet Archive that did not match the Rijksmuseum Data Dumps.
