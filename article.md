@@ -68,12 +68,12 @@ To be able to address these questions, it is necessary to evaluate the available
 
 1) Datasets and other resources available on the museum’s website;  
 
-<!-- #region citation-manager={"citations": {"rxs1z": []}} -->
-2) Relevant records published on the external platforms (such as (<cite id="rxs1z"><a href="#zotero%7C9238685%2FE4BE4KP9">(Wikidata, n.d.)</a></cite>)) may help to expand the data record and specify some aspects of museum objects; 
+<!-- #region citation-manager={"citations": {"tm29a": [{"id": "9238685/E4BE4KP9", "source": "zotero"}]}} -->
+2) Relevant records published on the external platforms (such as (<cite id="tm29a"><a href="#zotero%7C9238685%2FE4BE4KP9">[NO_PRINTED_FORM]</a></cite>) may help to expand the data record and specify some aspects of museum objects; 
 <!-- #endregion -->
 
 <!-- #region citation-manager={"citations": {"2nxka": [{"id": "9238685/GAEK6ZSA", "source": "zotero"}], "kiol8": [{"id": "9238685/ZHW5A3JJ", "source": "zotero"}], "r30ky": [{"id": "9238685/ED67DK2V", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} -->
-3) Snapshots on the web archives (Internet Archive (<cite id="kiol8"><a href="#zotero%7C9238685%2FZHW5A3JJ">(Internet Archive, n.d.)</a></cite>)) and the Web Collection of the National Library of the Netherlands (<cite id="2nxka"><a href="#zotero%7C9238685%2FGAEK6ZSA">(De Bode &#38; Teszelszky, 2021)</a></cite>; <cite id="r30ky"><a href="#zotero%7C9238685%2FED67DK2V">(De Bode et al., 2021)</a></cite>). The web-archived collections are necessary to identify the records that have been preserved and, therefore, made available as historical materials for study.
+3) Snapshots on the web archives (Internet Archive (<cite id="kiol8"><a href="#zotero%7C9238685%2FZHW5A3JJ">[NO_PRINTED_FORM]</a></cite>)) and the Web Collection of the National Library of the Netherlands (<cite id="2nxka"><a href="#zotero%7C9238685%2FGAEK6ZSA">[NO_PRINTED_FORM]</a></cite>; <cite id="r30ky"><a href="#zotero%7C9238685%2FED67DK2V">[NO_PRINTED_FORM]</a></cite>). The web-archived collections are necessary to identify the records that have been preserved and, therefore, made available as historical materials for study.
 <!-- #endregion -->
 
 <!-- #region citation-manager={"citations": {"3rhtd": [{"id": "16470964/BLEZ7TJN", "source": "zotero"}], "6o1t4": [{"id": "16470964/9GLBN5IU", "source": "zotero"}], "ecjhj": [{"id": "16470964/P6NINCT7", "source": "zotero"}], "nkqkh": [{"id": "16470964/88FTBWT3", "source": "zotero"}], "qsmhh": [{"id": "16470964/28X4NHXD", "source": "zotero"}], "tifqr": [{"id": "16470964/QRVJIED8", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} -->
