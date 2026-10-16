@@ -317,8 +317,9 @@ from IPython.display import Image, display
 display(Image("./media/openGLAM_URLs.jpg"))
 ```
 
-At the same time, placing some milestones of openness on this timeline enables us to see a significant gap in the historical record of the museum’s web presence (Figure 8). There is no evidence of spikes or other indicators of these uploads and the website's growth in the years around the milestones when the museum's collection was massively pulled online. For example, in 2011, the museum began releasing images to the public domain; at the end of 2012, the Rijkstudio was launched; and in 2013, 111.000 images were published in the public domain (OpenGLAM, 2013 noauthor_openglam_2013). In the museum's database, there is also a record of more than 200,000 artworks available in high resolution, according to data from 2015 (see Figure 3). Evidence of these activities is missing in the archived records.
-
+<!-- #region citation-manager={"citations": {"li2ej": [{"id": "9238685/XPLPBVES", "source": "zotero"}]}} -->
+At the same time, placing some milestones of openness on this timeline enables us to see a significant gap in the historical record of the museum’s web presence (Figure 8). There is no evidence of spikes or other indicators of these uploads and the website's growth in the years around the milestones when the museum's collection was massively pulled online. For example, in 2011, the museum began releasing images to the public domain; at the end of 2012, the Rijkstudio was launched; and in 2013, 111.000 images were published in the public domain (<cite id="li2ej"><a href="#zotero%7C9238685%2FXPLPBVES">(OpenGlam, 2013)</a></cite>). In the museum's database, there is also a record of more than 200,000 artworks available in high resolution, according to data from 2015 (see Figure 3). Evidence of these activities is missing in the archived records.
+<!-- #endregion -->
 
 ## URLs Analysis
 
