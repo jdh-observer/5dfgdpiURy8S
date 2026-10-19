@@ -447,11 +447,11 @@ As a result, the archival record, by today, is shaped almost entirely by the web
 
 The URL segmentation was implemented to identify the website’s substructures based on content analysis of these segments. HTML type of files were selected for segmentation because they represent a foundational structure of the website.
 
-<!-- #region citation-manager={"citations": {"kom26": [{"id": "16470964/ABIIGX4D", "source": "zotero"}]}} -->
-During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="kom26"><a href="#zotero%7C16470964%2FABIIGX4D">(<i>Wayback Machine - Calendar of Https://Www.Rijksmuseum.Nl/Nl/Ontdek-de-Collectie/Overzicht/Johannes-Vermeer</i>, n.d.)</a></cite>). 
+<!-- #region citation-manager={"citations": {"fi68i": [{"id": "9238685/A5LQMQGF", "source": "zotero"}]}} -->
+During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="fi68i"><a href="#zotero%7C9238685%2FA5LQMQGF">(<i>Wayback Machine: Capture History of Johannes Vermeer</i>, n.d.)</a></cite>). 
 <!-- #endregion -->
 
-```python jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} tags=["figure-12-*"]
+```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""}
 from IPython.display import HTML
 
 url = "https://www.rijksmuseum.nl/nl/ontdek-de-collectie/overzicht/johannes-vermeer"
