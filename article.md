@@ -1113,8 +1113,8 @@ from IPython.display import Image, display
 display(Image("./media/SK-A-3507.JPG"))
 ```
 
-<!-- #region citation-manager={"citations": {"haq4d": [{"id": "9238685/DJEWV2CN", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} -->
-However,  the object was discovered on Wikimedia as the “File:Kaïn en Abel Rijksmuseum SK-A-3507.jpeg”, titled in summary as “Willem de Zwart: Kaïn en Abel” and labelled by 'accession number' SK-A-3507. Also, the description indicated that the painting belonged to the Rijksmuseum collection (<cite id="haq4d"><a href="#zotero%7C9238685%2FDJEWV2CN">(<i>Kaïn En Abel (Painting SK-A-3507)</i>, n.d.)</a></cite>). This finding raises questions about the museum's documentation practices, as it is not yet transparent at the moment whether the painting remains in the collection. It was not found on the Rijksmuseum collection online under the title, nor in the collection devoted to the painter, Willem de Zwart.
+<!-- #region citation-manager={"citations": {"gq2xu": [{"id": "9238685/DJEWV2CN", "source": "zotero"}]}} editable=true slideshow={"slide_type": ""} -->
+However,  the object was discovered on Wikimedia as the “File:Kaïn en Abel Rijksmuseum SK-A-3507.jpeg”, titled in summary as “Willem de Zwart: Kaïn en Abel” and labelled by 'accession number' SK-A-3507. Also, the description indicated that the painting belonged to the Rijksmuseum collection (<cite id="gq2xu"><a href="#zotero%7C9238685%2FDJEWV2CN">(Wikimedia Commons, n.d.)</a></cite>). This finding raises questions about the museum's documentation practices, as it is not yet transparent at the moment whether the painting remains in the collection. It was not found on the Rijksmuseum collection online under the title, nor in the collection devoted to the painter, Willem de Zwart.
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} -->
