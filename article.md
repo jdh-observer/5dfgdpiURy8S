@@ -13,32 +13,32 @@ jupyter:
     name: python3
 ---
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["title"] -->
 # How Open is the Rijksmuseum? Web Archives, Documentation, and the Historical Record of Online Collections
 <!-- #endregion -->
 
-<!-- #region tags=["contributor"] -->
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["contributor"] -->
 ### Nadezhda  Povroznik [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-2044-8147) 
 Technical University of Darmstadt
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["copyright"] -->
 [![cc-by](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/) 
 © Nadezhda  Povroznik. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the [Creative Commons Attribution License CC-BY](https://creativecommons.org/licenses/by/4.0/)
 
 <!-- #endregion -->
 
-```python tags=["cover-*"]
+```python editable=true slideshow={"slide_type": ""} tags=["cover"]
 from IPython.display import Image, display
 
 display(Image("./media/cover.png"))
 ```
 
-<!-- #region tags=["keywords"] -->
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["keywords"] -->
 web history, web archives, Internet Archive, KB Web Collection, Rijksmuseum, openness, source criticism, historical record of web presence, URL analysis
 <!-- #endregion -->
 
-<!-- #region tags=["abstract"] -->
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["abstract"] -->
 The Rijksmuseum in Amsterdam has been widely recognised as a pioneering institution in making cultural heritage openly accessible. This paper is motivated by the question of how the historical development of openness at the Rijksmuseum can be studied through preserved web records. The main goal is to assess the availability and analytical value of web-archived resources documenting the Rijksmuseum’s web presence. The study is built upon datasets from the Internet Archive and the Web Collection of the National Library of the Netherlands (KB), covering the period from 1999 to June 2025. Methodologically, it applies URL-based analysis and comparative analysis to examine temporal coverage and overlaps between the two web collections. The findings show that web preservation of the Rijksmuseum website is highly uneven and only partially reflects the growth of the online collection. Records that document large-scale uploads and initiatives related to developing openness are highly fragmented in the web collections. Although the Internet Archive and the KB Web Collection each preserve unique materials and fill different temporal gaps, neither provides a comprehensive record on its own. The paper highlights the methodological consequences of these limitations and underscores the need to combine web-archived datasets to study the history of the museum on the web, to apply source criticism when analysing the development of the museum on the web, to the need for thorough and transparent documentation as an open practice, and to reconsider the approach to web preservation, thereby increasing the museum's role in this process.
 <!-- #endregion -->
 
