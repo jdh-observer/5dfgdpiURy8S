@@ -453,7 +453,7 @@ The URL segmentation was implemented to identify the website’s substructures b
 During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="fi68i"><a href="#zotero%7C9238685%2FA5LQMQGF">(<i>Wayback Machine: Capture History of Johannes Vermeer</i>, n.d.)</a></cite>). 
 <!-- #endregion -->
 
-```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""}
+```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""} tags=["figure-references-url-*"]
 from IPython.display import HTML
 
 url = "https://www.rijksmuseum.nl/nl/ontdek-de-collectie/overzicht/johannes-vermeer"
