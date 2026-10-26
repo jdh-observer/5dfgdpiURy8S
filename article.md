@@ -122,7 +122,7 @@ To access data from the Internet Archive, the Wayback Machine API was used (<cit
 For assessing volumes of obtained archived materials, devoted to the museum collection online, and to compare them with the volume of the Rijksmuseum's website on the live web across time, the indicator of the number of items in the museum's collection database was explored. These statistics on the database's volume were displayed on a dedicated webpage and obtained from the Wayback Machine. The Rijksstudio exposed the number of items in the database for both the general pool of artworks and those published in the Rijksstudio. For example, on the snapshot created on 23 October 2018, these numbers are available: 647.965 artworks and 437.977 Rijksstudio's (<cite id="xm7xx"><a href="#zotero%7C9238685%2F6GM86DYZ">(Rijksmuseum, n.d.)</a></cite>). Based on the available data from the last successfully preserved snapshot, the diagram was built to be able to trace the progress of uploading objects to the digital collection online (Figure 2).
 <!-- #endregion -->
 
-```python editable=true jdh={"module": "object", "object": {"source": ["Rijksmuseum: Artworks Online and Rijksstudio's Entries"]}} slideshow={"slide_type": ""}
+```python editable=true jdh={"module": "object", "object": {"source": ["Rijksmuseum: Artworks Online and Rijksstudio's Entries"]}} slideshow={"slide_type": ""} tags=["figure-artowrks-online-*"]
 import pandas as pd
 import matplotlib.pyplot as plt
 from IPython.display import display, HTML
@@ -151,7 +151,9 @@ plt.legend()
 plt.xticks(years, rotation=45)
 plt.tight_layout()
 plt.show()
+```
 
+```python
 # ---------- Clean formatting ----------
 def fmt_int(x):
     if pd.isna(x):
@@ -451,7 +453,7 @@ The URL segmentation was implemented to identify the website’s substructures b
 During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="fi68i"><a href="#zotero%7C9238685%2FA5LQMQGF">(<i>Wayback Machine: Capture History of Johannes Vermeer</i>, n.d.)</a></cite>). 
 <!-- #endregion -->
 
-```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""}
+```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""} tags=["figure-references-url-*"]
 from IPython.display import HTML
 
 url = "https://www.rijksmuseum.nl/nl/ontdek-de-collectie/overzicht/johannes-vermeer"
