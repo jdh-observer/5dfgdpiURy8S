@@ -748,16 +748,16 @@ The comparison of language prefixes across the two web collections (Figures 12 a
 
 In the KB Web Collection, the Dutch prefix dominates most of the years and typically accounts for 70 to 90 per cent of the content and in 2024, it includes about 10 per cent in other languages in the collection. English appears consistently as the secondary language, while all other prefixes occur only sporadically. This pattern reflects both the museum’s stable bilingual publishing strategy and the targeted nature of KB harvesting, which tends to prioritise core pages over multilingual variants.
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 #### Content Analysis of Segments
-
+<!-- #endregion -->
 
 Segmentation of URLs helped to identify the core parts of the website, such as ‘collection’, ‘stories’, ‘api’, ‘exhibitions’, and others. Due to the uneven process of web preservation, it is impossible to assess to a certain extent the dominant structures of the website from a historical perspective. However, we are able to evaluate preserved content in the web collections and see the potential of these collections to communicate the content of these structures. 
 
 
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
-```python jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} tags=["figure-15-*"]
+```python editable=true jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} slideshow={"slide_type": ""} tags=["figure-15-*"]
 # === INSTRUCTION ===
 # To visualise a specific time period (e.g. to explore temporary gaps),
 # change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
@@ -859,8 +859,21 @@ plot_wordcloud(
 
 ```
 
-The URL string could include a maximum of 8 segments, but because the repetition of values in segments 6-8 was low, only the top 15 values from segments 1-5 were visualised. The word cloud displays the names of the top 15 segments, ranked by their appearance in URLs by year. Based on this word cloud, it is possible to identify a range of topics, visible through the segmented areas of the URLs.  Overall data, for the entire period, shows dominance of the collection topic being written in English (collection) and in Dutch (collectie). This dominance is conditioned by massive uploads of the digital collection online.
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
+To visualise a specific time period (e.g. to explore temporary
+gaps), change the values of START_YEAR and END_YEAR in the USER SETTINGS
+section in the code cells.
 
+Example:
+START_YEAR = 2005
+END_YEAR   = 2010
+
+After changing these values, re-run the cell to update the diagram.
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+The URL string could include a maximum of 8 segments, but because the repetition of values in segments 6-8 was low, only the top 15 values from segments 1-5 were visualised. The word cloud displays the names of the top 15 segments, ranked by their appearance in URLs by year. Based on this word cloud, it is possible to identify a range of topics, visible through the segmented areas of the URLs.  Overall data, for the entire period, shows dominance of the collection topic being written in English (collection) and in Dutch (collectie). This dominance is conditioned by massive uploads of the digital collection online.
+<!-- #endregion -->
 
 A collection-centred topic is dominant for the dataset. It includes such terms as collectie (collection), collection, collections, verzamelingen (collections), object, objecten (objects), and explore-the-collection, which collectively describe access to artworks and overviews of the collections. A second cluster relates to participatory-driven features, most visibly represented by the Rijksstudio, and is surrounded by terms such as creaties (creations), my-first-collection, mijn-eerste-verzameling (my first collection), creations, my, mijn (my), and set, signalling personalisation in the use of the collection. A third set of segments is tied to curatorial content and narratives, including stories, story, kunstkranten (art newspapers), blog-like structures, and catalogus-entry (catalogue entry), reflecting interpretive layers of the content and its contexts. A fourth group covers visitor information and public communication, exposing segments such as zien-en-doen (see and do), bezoekersinfo (visitor information), whats-on, press, pers (press), persberichten (press releases), press-releases, tentoonstellingen (exhibitions), agenda (agenda / events), and nu-in-het-museum (now in the museum). Finally, a distinct cluster points to research, education, and scholarly resources, which is indicated by such segments as onderzoek (research), onderwijs (education), educatie (education), wetenschap (science), subjects, onderwerpen (subjects/topics), and artists, and another reflects technical and infrastructural elements, such as api, achtergronden (backgrounds), and assets.
 
