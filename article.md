@@ -880,9 +880,9 @@ A collection-centred topic is dominant for the dataset. It includes such terms a
 
 Adjusting the period, it is possible to see changes in the dominant segments over time (use the hermeneutic layer to explore the data). Across all periods in the Internet Archive captures, collection-related segments remained the core focus of the Rijksmuseum website. What changes over time is the vocabulary surrounding this stable core. In the early 2000s, the website’s records revealed information about visiting the museum, which is noticeable through such segments as bezoekersinfo (visitor information), tentoonstellingen (exhibitions), bereikbaarheid (accessibility) and openingtijden (opening hours). Around 2012–2014, with the launch of Rijksstudio, the dataset reflects inclusion of participatory and personalised content such as rijksstudio, creaties (creations), mijn-eerste-verzameling (my first collection), my-first-collection. In the late 2010s and early 2020s, new segments appeared at the top to designate digital infrastructure.
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 #### Object Numbers
-
+<!-- #endregion -->
 
 Now consider the segments related to the collection more precisely. Initially, research has been largely motivated by the development of digital collections published by the museum online and the processes around the development of openness. Therefore, it is interesting to look at the representation of artworks in the collections.
 
@@ -1090,10 +1090,13 @@ plt.show()
 
 ```
 
-The absence of object numbers after 2016, as the diagram displays, highlights changes in the practice of building the URLs that excluded the object numbers from the string. Using the examples from experimental exploration, this transition will be discussed further.
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+The absence of object numbers after 2016, as it is visible from the diagram, demonstrates that the images of objects were not captured after that date. Around that time, the practice of building the URLs changed. TheURL strings excluded the object numbers, and some parts of the URLs were replaced with ciphered text, making them difficult for humans to read and inaccessible to the same methods of algorithmic exploration. On the examples from experimental exploration, it will be highlighted as well. At the same time, this diagram also shows the limitations of the URL analysis.
+<!-- #endregion -->
 
-
-This diagram also shows the strict limitations of the URL analysis in addressing visual changes. Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
+<!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} -->
 ## Rijksmuseum metadata: Experimental exploration
