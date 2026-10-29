@@ -748,16 +748,16 @@ The comparison of language prefixes across the two web collections (Figures 12 a
 
 In the KB Web Collection, the Dutch prefix dominates most of the years and typically accounts for 70 to 90 per cent of the content and in 2024, it includes about 10 per cent in other languages in the collection. English appears consistently as the secondary language, while all other prefixes occur only sporadically. This pattern reflects both the museum’s stable bilingual publishing strategy and the targeted nature of KB harvesting, which tends to prioritise core pages over multilingual variants.
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 #### Content Analysis of Segments
-
+<!-- #endregion -->
 
 Segmentation of URLs helped to identify the core parts of the website, such as ‘collection’, ‘stories’, ‘api’, ‘exhibitions’, and others. Due to the uneven process of web preservation, it is impossible to assess to a certain extent the dominant structures of the website from a historical perspective. However, we are able to evaluate preserved content in the web collections and see the potential of these collections to communicate the content of these structures. 
 
 
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
-```python jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} tags=["figure-15-*"]
+```python editable=true jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} slideshow={"slide_type": ""} tags=["figure-15-*"]
 # === INSTRUCTION ===
 # To visualise a specific time period (e.g. to explore temporary gaps),
 # change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
@@ -859,17 +859,30 @@ plot_wordcloud(
 
 ```
 
-The URL string could include a maximum of 8 segments, but because the repetition of values in segments 6-8 was low, only the top 15 values from segments 1-5 were visualised. The word cloud displays the names of the top 15 segments, ranked by their appearance in URLs by year. Based on this word cloud, it is possible to identify a range of topics, visible through the segmented areas of the URLs.  Overall data, for the entire period, shows dominance of the collection topic being written in English (collection) and in Dutch (collectie). This dominance is conditioned by massive uploads of the digital collection online.
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
+To visualise a specific time period (e.g. to explore temporary
+gaps), change the values of START_YEAR and END_YEAR in the USER SETTINGS
+section in the code cells.
 
+Example:
+START_YEAR = 2005
+END_YEAR   = 2010
+
+After changing these values, re-run the cell to update the diagram.
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+The URL string could include a maximum of 8 segments, but because the repetition of values in segments 6-8 was low, only the top 15 values from segments 1-5 were visualised. The word cloud displays the names of the top 15 segments, ranked by their appearance in URLs by year. Based on this word cloud, it is possible to identify a range of topics, visible through the segmented areas of the URLs.  Overall data, for the entire period, shows dominance of the collection topic being written in English (collection) and in Dutch (collectie). This dominance is conditioned by massive uploads of the digital collection online.
+<!-- #endregion -->
 
 A collection-centred topic is dominant for the dataset. It includes such terms as collectie (collection), collection, collections, verzamelingen (collections), object, objecten (objects), and explore-the-collection, which collectively describe access to artworks and overviews of the collections. A second cluster relates to participatory-driven features, most visibly represented by the Rijksstudio, and is surrounded by terms such as creaties (creations), my-first-collection, mijn-eerste-verzameling (my first collection), creations, my, mijn (my), and set, signalling personalisation in the use of the collection. A third set of segments is tied to curatorial content and narratives, including stories, story, kunstkranten (art newspapers), blog-like structures, and catalogus-entry (catalogue entry), reflecting interpretive layers of the content and its contexts. A fourth group covers visitor information and public communication, exposing segments such as zien-en-doen (see and do), bezoekersinfo (visitor information), whats-on, press, pers (press), persberichten (press releases), press-releases, tentoonstellingen (exhibitions), agenda (agenda / events), and nu-in-het-museum (now in the museum). Finally, a distinct cluster points to research, education, and scholarly resources, which is indicated by such segments as onderzoek (research), onderwijs (education), educatie (education), wetenschap (science), subjects, onderwerpen (subjects/topics), and artists, and another reflects technical and infrastructural elements, such as api, achtergronden (backgrounds), and assets.
 
 
 Adjusting the period, it is possible to see changes in the dominant segments over time (use the hermeneutic layer to explore the data). Across all periods in the Internet Archive captures, collection-related segments remained the core focus of the Rijksmuseum website. What changes over time is the vocabulary surrounding this stable core. In the early 2000s, the website’s records revealed information about visiting the museum, which is noticeable through such segments as bezoekersinfo (visitor information), tentoonstellingen (exhibitions), bereikbaarheid (accessibility) and openingtijden (opening hours). Around 2012–2014, with the launch of Rijksstudio, the dataset reflects inclusion of participatory and personalised content such as rijksstudio, creaties (creations), mijn-eerste-verzameling (my first collection), my-first-collection. In the late 2010s and early 2020s, new segments appeared at the top to designate digital infrastructure.
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 #### Object Numbers
-
+<!-- #endregion -->
 
 Now consider the segments related to the collection more precisely. Initially, research has been largely motivated by the development of digital collections published by the museum online and the processes around the development of openness. Therefore, it is interesting to look at the representation of artworks in the collections.
 
@@ -947,7 +960,7 @@ if HAS_VENN:
 
 The amount of object numbers extracted from URL strings that lead to image files is significantly lower than of HTML files. For the Internet Archive, the total number of unique object numbers is 1086, and for the KB Web collection, it is 69. Figure 16 shows overlapping images, where a part of the images from the KB Web Collection does not exist in the collection of the Internet Archive (48 items).
 
-```python jdh={"module": "object", "object": {"source": ["Overlap of Object Numbers in the Image subset between the Internet Archive (IA)"]}} tags=["figure-17-*"]
+```python editable=true jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers in the Image Dataset by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} slideshow={"slide_type": ""} tags=["figure-17-*"]
 import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn2
@@ -1077,10 +1090,13 @@ plt.show()
 
 ```
 
-The absence of object numbers after 2016, as the diagram displays, highlights changes in the practice of building the URLs that excluded the object numbers from the string. Using the examples from experimental exploration, this transition will be discussed further.
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+The absence of object numbers after 2016, as it is visible from the diagram, demonstrates that the images of objects were not captured after that date. Around that time, the practice of building the URLs changed. TheURL strings excluded the object numbers, and some parts of the URLs were replaced with ciphered text, making them difficult for humans to read and inaccessible to the same methods of algorithmic exploration. On the examples from experimental exploration, it will be highlighted as well. At the same time, this diagram also shows the limitations of the URL analysis.
+<!-- #endregion -->
 
-
-This diagram also shows the strict limitations of the URL analysis in addressing visual changes. Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
+<!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} -->
 ## Rijksmuseum metadata: Experimental exploration
