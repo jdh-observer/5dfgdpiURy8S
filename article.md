@@ -449,8 +449,8 @@ As a result, the archival record, by today, is shaped almost entirely by the web
 
 The URL segmentation was implemented to identify the website’s substructures based on content analysis of these segments. HTML type of files were selected for segmentation because they represent a foundational structure of the website.
 
-<!-- #region citation-manager={"citations": {"fi68i": [{"id": "9238685/A5LQMQGF", "source": "zotero"}]}} -->
-During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="fi68i"><a href="#zotero%7C9238685%2FA5LQMQGF">(<i>Wayback Machine: Capture History of Johannes Vermeer</i>, n.d.)</a></cite>). 
+<!-- #region citation-manager={"citations": {"l8xjc": [{"id": "9238685/A5LQMQGF", "source": "zotero"}]}} -->
+During segmentation, the ‘/’ sign has been used as a segment identifier. All the string fragments were separated according to the hierarchy and marked with the segment number. The number was assigned according to the order, following the domain name. For example, in the link below, segment 1 is ‘nl’, segment 2 is ‘ontdek-de-collectie’, segment 3 is ‘overzicht’, and segment 4 is ‘johannes-vermeer’ - see this example below in Figure 11 (<cite id="l8xjc"><a href="#zotero%7C9238685%2FA5LQMQGF">(Internet Archive Wayback Machine, n.d.)</a></cite>). 
 <!-- #endregion -->
 
 ```python editable=true jdh={"module": "object", "object": {"source": ["An Example of Segmentation"]}} slideshow={"slide_type": ""} tags=["figure-references-url-*"]
