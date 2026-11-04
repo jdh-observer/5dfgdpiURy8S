@@ -758,16 +758,6 @@ Segmentation of URLs helped to identify the core parts of the website, such as �
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
 ```python editable=true jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} slideshow={"slide_type": ""} tags=["figure-15-*"]
-# === INSTRUCTION ===
-# To visualise a specific time period (e.g. to explore temporary gaps),
-# change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
-
-# Example:
-#   START_YEAR = 2005
-#   END_YEAR   = 2010
-
-# After changing these values, re-run the cell to update the diagram.
-
 # Wordcloud without prefixes
 import pandas as pd
 import numpy as np
@@ -860,8 +850,7 @@ plot_wordcloud(
 ```
 
 <!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
-To visualise a specific time period (e.g. to explore temporary
-gaps), change the values of START_YEAR and END_YEAR in the USER SETTINGS
+To visualise a specific time period (e.g. to explore temporary gaps), change the values of START_YEAR and END_YEAR in the USER SETTINGS
 section in the code cells.
 
 Example:
@@ -1023,7 +1012,7 @@ plt.show()
 
 Data filtering in the dataset is very high at this stage, because only images that include the ‘collection’ or ‘collectie’ segment are included. They are deduplicated by having one object number across all datasets, regardless of their size and quality. Deduplication included the rule of keeping the most recent record and deleting from the subset of data older versions of the image. Also, these files mainly belong to the earlier period of history of the website, as it is visible from the distribution chart in Figure 17.
 
-```python jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-18-*"]
+```python jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers in the Image Dataset by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-18-*"]
 # Distribution object numbers by years
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1082,7 +1071,7 @@ plt.bar(x + width/2, kb_vals, width, label="KB", color="#DD8452")
 plt.xticks(x, all_years, rotation=90)
 plt.xlabel("Year")
 plt.ylabel("Number of unique object numbers")
-plt.title("Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
+plt.title("Distribution of Object Numbers in the Image Dataset by Year the Internet Archive (IA) vs the KB Web Collection (KB)")
 plt.legend()
 plt.grid(axis="y", alpha=0.3)
 plt.tight_layout()
