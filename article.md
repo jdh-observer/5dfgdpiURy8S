@@ -1012,7 +1012,7 @@ plt.show()
 
 Data filtering in the dataset is very high at this stage, because only images that include the ‘collection’ or ‘collectie’ segment are included. They are deduplicated by having one object number across all datasets, regardless of their size and quality. Deduplication included the rule of keeping the most recent record and deleting from the subset of data older versions of the image. Also, these files mainly belong to the earlier period of history of the website, as it is visible from the distribution chart in Figure 17.
 
-```python jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} tags=["figure-18-*"]
+```python editable=true jdh={"module": "object", "object": {"source": ["Distribution of Object Numbers in the Image Dataset by Year the Internet Archive (IA) vs the KB Web Collection (KB)"]}} slideshow={"slide_type": ""} tags=["figure-18-*"]
 # Distribution object numbers by years
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1071,7 +1071,7 @@ plt.bar(x + width/2, kb_vals, width, label="KB", color="#DD8452")
 plt.xticks(x, all_years, rotation=90)
 plt.xlabel("Year")
 plt.ylabel("Number of unique object numbers")
-plt.title("Distribution of Object Numbers by Year (the Internet Archive (IA) vs the KB Web Collection (KB))")
+plt.title("Distribution of Object Numbers in the Image Dataset by Year the Internet Archive (IA) vs the KB Web Collection (KB)")
 plt.legend()
 plt.grid(axis="y", alpha=0.3)
 plt.tight_layout()
@@ -1079,8 +1079,9 @@ plt.show()
 
 ```
 
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 The absence of object numbers after 2016, as the diagram displays, highlights changes in the practice of building the URLs that excluded the object numbers from the string. Using the examples from experimental exploration, this transition will be discussed further.
-
+<!-- #endregion -->
 
 This diagram also shows the strict limitations of the URL analysis in addressing visual changes. Based on those URLs, which indicate the image format and include the object number in it, the collage was created so that you may see it on the cover of this article. These images were published on the museum’s website in the online collection in the early 2000s. They were obtained from the Internet Archive, kept at the same resolution and then combined into a collage to illustrate some examples of the museum’s website visuals. These images are very different in their quality from the high-resolution reproductions available today. These visuals, even in low resolution, serve as historical evidence of the museum’s early web presence. They give an idea of the images used on the website and in the online collection in general, and show the opportunities offered by the technologies at the time. However, the preserved data does not provide sufficient information to assess shifts in visual support for the objects and the collection in general, due to a lack of data and difficulties identifying dedicated images in the data.
 
