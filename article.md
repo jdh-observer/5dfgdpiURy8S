@@ -758,16 +758,6 @@ Segmentation of URLs helped to identify the core parts of the website, such as �
 The visualisation of the segments in the word cloud (Figure 14) reflects only the Internet Archive's collection. The KB Web Collection overlaps with the Internet Archive in these Top 15 segments per year.
 
 ```python jdh={"module": "object", "object": {"source": ["Wordcloud of Top 15 Segments Collected per Year 2000\u20132025 (Internet Archive)"]}} tags=["figure-15-*"]
-# === INSTRUCTION ===
-# To visualise a specific time period (e.g. to explore temporary gaps),
-# change the values of START_YEAR and END_YEAR in the USER SETTINGS section below.
-
-# Example:
-#   START_YEAR = 2005
-#   END_YEAR   = 2010
-
-# After changing these values, re-run the cell to update the diagram.
-
 # Wordcloud without prefixes
 import pandas as pd
 import numpy as np
@@ -859,11 +849,23 @@ plot_wordcloud(
 
 ```
 
+<!-- #region editable=true slideshow={"slide_type": ""} tags=["hermeneutics"] -->
+To visualise a specific time period (e.g. to explore temporary gaps), change the values of START_YEAR and END_YEAR in the USER SETTINGS section in the code cells.
+
+Example:
+START_YEAR = 2005
+END_YEAR   = 2010
+
+After changing these values, re-run the cell to update the diagram.
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 The URL string could include a maximum of 8 segments, but because the repetition of values in segments 6-8 was low, only the top 15 values from segments 1-5 were visualised. The word cloud displays the names of the top 15 segments, ranked by their appearance in URLs by year. Based on this word cloud, it is possible to identify a range of topics, visible through the segmented areas of the URLs.  Overall data, for the entire period, shows dominance of the collection topic being written in English (collection) and in Dutch (collectie). This dominance is conditioned by massive uploads of the digital collection online.
+<!-- #endregion -->
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 A collection-centred topic is dominant for the dataset. It includes such terms as collectie (collection), collection, collections, verzamelingen (collections), object, objecten (objects), and explore-the-collection, which collectively describe access to artworks and overviews of the collections. A second cluster relates to participatory-driven features, most visibly represented by the Rijksstudio, and is surrounded by terms such as creaties (creations), my-first-collection, mijn-eerste-verzameling (my first collection), creations, my, mijn (my), and set, signalling personalisation in the use of the collection. A third set of segments is tied to curatorial content and narratives, including stories, story, kunstkranten (art newspapers), blog-like structures, and catalogus-entry (catalogue entry), reflecting interpretive layers of the content and its contexts. A fourth group covers visitor information and public communication, exposing segments such as zien-en-doen (see and do), bezoekersinfo (visitor information), whats-on, press, pers (press), persberichten (press releases), press-releases, tentoonstellingen (exhibitions), agenda (agenda / events), and nu-in-het-museum (now in the museum). Finally, a distinct cluster points to research, education, and scholarly resources, which is indicated by such segments as onderzoek (research), onderwijs (education), educatie (education), wetenschap (science), subjects, onderwerpen (subjects/topics), and artists, and another reflects technical and infrastructural elements, such as api, achtergronden (backgrounds), and assets.
-
+<!-- #endregion -->
 
 Adjusting the period, it is possible to see changes in the dominant segments over time (use the hermeneutic layer to explore the data). Across all periods in the Internet Archive captures, collection-related segments remained the core focus of the Rijksmuseum website. What changes over time is the vocabulary surrounding this stable core. In the early 2000s, the website’s records revealed information about visiting the museum, which is noticeable through such segments as bezoekersinfo (visitor information), tentoonstellingen (exhibitions), bereikbaarheid (accessibility) and openingtijden (opening hours). Around 2012–2014, with the launch of Rijksstudio, the dataset reflects inclusion of participatory and personalised content such as rijksstudio, creaties (creations), mijn-eerste-verzameling (my first collection), my-first-collection. In the late 2010s and early 2020s, new segments appeared at the top to designate digital infrastructure.
 
