@@ -153,7 +153,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-```python
+```python jdh={"module": "object", "object": {"source": ["Artworks Online and Rijksstudio Entries per Year"]}} tags=["table-artworks-online-*"]
 # ---------- Clean formatting ----------
 def fmt_int(x):
     if pd.isna(x):
